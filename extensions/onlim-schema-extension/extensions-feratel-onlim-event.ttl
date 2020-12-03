@@ -1,0 +1,351 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix onlim: <http://onlim.com/schema/> .
+
+### Event subclasses
+
+onlim:AdventEvent
+  rdfs:subClassOf schema:Event ;
+  a rdfs:Class ;
+  rdfs:label "AdventEvent"@en .
+  
+onlim:Break
+  rdfs:subClassOf schema:Event ;
+  a rdfs:Class ;
+  rdfs:label "Break"@en .
+  
+onlim:CulturalEvent
+  rdfs:subClassOf schema:Event ;
+  a rdfs:Class ;
+  rdfs:label "CulturalEvent"@en .
+  
+onlim:Module
+  rdfs:subClassOf schema:Event ;
+  a rdfs:Class ;
+  rdfs:label "Module"@en .
+  
+onlim:ReligiousEvent
+  rdfs:subClassOf schema:Event ;
+  a rdfs:Class ;
+  rdfs:label "ReligiousEvent"@en .
+  
+onlim:Session
+  rdfs:subClassOf schema:Event ;
+  a rdfs:Class ;
+  rdfs:label "Session"@en .
+  
+onlim:ShowEvent
+  a rdfs:Class ;
+  rdfs:label "ShowEvent"@en ;
+  rdfs:subClassOf schema:Event .  
+
+onlim:TourEvent
+  rdfs:subClassOf schema:Event ;
+  a rdfs:Class ;
+  rdfs:label "TourEvent"@en .
+
+onlim:TraditionEvent
+  rdfs:subClassOf schema:Event ;
+  a rdfs:Class ;
+  rdfs:label "TraditionEvent"@en .
+  
+### BusinessEvent subclasses
+
+onlim:Symposium
+  a rdfs:Class ;  
+  rdfs:label "Symposium"@en ;
+  rdfs:subClassOf schema:BusinessEvent .  
+  
+### DanceEvent subclasses
+
+onlim:BalletEvent
+  a rdfs:Class ;
+  rdfs:label "BalletEvent"@en ;
+  rdfs:subClassOf schema:DanceEvent .
+  
+### EducationEvent subclasses
+
+  onlim:HandcraftCourse
+  a rdfs:Class ;  
+  rdfs:label "HandcraftCourse"@en ;
+  rdfs:subClassOf schema:EducationEvent .
+
+  onlim:Seminar
+  rdfs:subClassOf schema:EducationEvent, schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Seminar"@en .
+   
+### ExhibitionEvent subclasses
+
+onlim:EasterExhibitionEvent
+  a rdfs:Class ;
+  rdfs:label "EasterExhibitionEvent"@en ;
+  rdfs:subClassOf schema:ExhibitionEvent .    
+  
+onlim:Fair
+  a rdfs:Class ;
+  rdfs:label "Fair"@en ;
+  rdfs:subClassOf schema:ExhibitionEvent, schema:SaleEvent .  
+  
+### Festival subclasses
+onlim:Carnival
+  a rdfs:Class ;
+  rdfs:label "Carnival"@en ;
+  rdfs:subClassOf schema:Festival .    
+ 
+### FoodEvent subclasses
+
+onlim:DinnerEvent
+  a rdfs:Class ;  
+  rdfs:label "DinnerEvent"@en ;
+  rdfs:subClassOf schema:FoodEvent .
+  
+### MusicEvent subclasses
+
+onlim:BrassMusicEvent
+  a rdfs:Class ;
+  rdfs:label "BrassMusicEvent"@en ;
+  rdfs:subClassOf schema:MusicEvent .
+  
+onlim:ChamberMusicEvent
+  a rdfs:Class ;
+  rdfs:label "ChamberMusicEvent"@en ;
+  rdfs:subClassOf schema:MusicEvent .
+  
+onlim:ClassicalMusicEvent
+  a rdfs:Class ;  
+  rdfs:label "ClassicalMusicEvent"@en ;
+  rdfs:subClassOf schema:MusicEvent .
+
+onlim:ComtemporaryMusicEvent
+  a rdfs:Class ;  
+  rdfs:label "ComtemporaryMusicEvent"@en ;
+  rdfs:subClassOf schema:MusicEvent .
+  
+onlim:CountryMusicEvent
+  a rdfs:Class ;  
+  rdfs:label "CountryMusicEvent"@en ;
+  rdfs:subClassOf schema:MusicEvent .  
+  
+onlim:DinnerConcert
+  a rdfs:Class ;  
+  rdfs:label "DinnerConcert"@en ;
+  rdfs:subClassOf schema:MusicEvent .  
+  
+onlim:DiscoEvent
+  a rdfs:Class ;
+  rdfs:label "DiscoEvent"@en ;
+  rdfs:subClassOf schema:MusicEvent .  
+  
+onlim:EasterConcert
+  a rdfs:Class ;  
+  rdfs:label "EasterConcert"@en ;
+  rdfs:subClassOf schema:MusicEvent .
+
+onlim:EthnicMusicEvent
+  a rdfs:Class ;  
+  rdfs:label "EthnicMusicEvent"@en ;
+  rdfs:subClassOf schema:MusicEvent .
+  
+onlim:FolkMusicEvent
+  a rdfs:Class ;  
+  rdfs:label "FolkMusicEvent"@en ;
+  rdfs:subClassOf schema:MusicEvent .  
+
+onlim:Musical
+  a rdfs:Class ;
+  rdfs:label "Musical"@en ;
+  rdfs:subClassOf schema:MusicEvent .
+
+onlim:OperaEvent
+  a rdfs:Class ;  
+  rdfs:label "OperaEvent"@en ;
+  rdfs:subClassOf schema:MusicEvent .
+  
+onlim:RockPopEvent
+  a rdfs:Class ;  
+  rdfs:label "RockPopEvent"@en ;
+  rdfs:subClassOf schema:MusicEvent .
+
+onlim:SacredMusicEvent
+  a rdfs:Class ;  
+  rdfs:label "SacredMusicEvent"@en ;
+  rdfs:subClassOf schema:MusicEvent .
+
+onlim:TechnoRapMusicEvent
+  a rdfs:Class ;
+  rdfs:label "TechnoRapMusicEvent"@en ;
+  rdfs:subClassOf schema:MusicEvent .
+  
+### SaleEvent subclasses
+
+onlim:EasterMarket
+  a rdfs:Class ;  
+  rdfs:label "EasterMarket"@en ;
+  rdfs:subClassOf schema:SaleEvent .
+  
+onlim:Market
+  a rdfs:Class ;
+  rdfs:label "Market"@en ;
+  rdfs:subClassOf schema:SaleEvent .  
+
+onlim:NewYearsMarket
+  a rdfs:Class ;  
+  rdfs:label "NewYearsMarket"@en ;
+  rdfs:subClassOf schema:SaleEvent .
+
+onlim:StreetMarketEvent
+  a rdfs:Class ;  
+  rdfs:label "StreetMarketEvent"@en ;
+  rdfs:subClassOf schema:SaleEvent .
+
+### SportsEvent subclasses
+
+onlim:WinterSportsEvent
+  a rdfs:Class ;  
+  rdfs:label "WinterSportsEvent"@en ;
+  rdfs:subClassOf schema:SportsEvent .
+
+### onlim:ShowEvent subclasses
+
+onlim:CircusEvent
+  a rdfs:Class ;  
+  rdfs:label "CircusEvent"@en ;
+  rdfs:subClassOf onlim:ShowEvent .  
+     
+### TheaterEvent subclasses  
+  
+onlim:CabaretEvent
+  a rdfs:Class ;
+  rdfs:label "CabaretEvent"@en ;
+  rdfs:subClassOf schema:TheaterEvent .  
+  
+onlim:ChildensTheater
+  a rdfs:Class ;  
+  rdfs:label "ChildensTheater"@en ;
+  rdfs:subClassOf schema:TheaterEvent .
+  
+onlim:FolkTheaterEvent
+  a rdfs:Class ;
+  rdfs:label "FolkTheaterEvent"@en ;
+  rdfs:subClassOf schema:TheaterEvent .  
+  
+onlim:MarionetteTheaterEvent
+  a rdfs:Class ;
+  rdfs:label "MarionetteTheaterEvent"@en ;
+  rdfs:subClassOf schema:TheaterEvent .
+  
+onlim:PantomineTheaterEvent
+  a rdfs:Class ;
+  rdfs:label "PantomineTheaterEvent"@en ;
+  rdfs:subClassOf schema:TheaterEvent .
+
+onlim:VarietyShowEvent
+  a rdfs:Class ;  
+  rdfs:label "VarietyShowEvent"@en ;
+  rdfs:subClassOf schema:TheaterEvent .
+
+#####Subclasses of onlim:Break
+onlim:BreakfastBreak
+	a rdfs:Class ;
+	rdfs:label "BreakfastBreak"@en ;  
+	rdfs:subClassOf onlim:FoodBreak . 
+
+onlim:CoffeeBreak
+  rdfs:subClassOf onlim:Break ;
+  a rdfs:Class ;
+  rdfs:label "CoffeeBreak"@en .
+  
+onlim:Dinner
+  rdfs:subClassOf onlim:FoodBreak ;
+  a rdfs:Class ;
+  rdfs:label "Dinner"@en .  
+  
+onlim:FoodBreak
+  rdfs:subClassOf onlim:Break ;
+  a rdfs:Class ;
+  rdfs:label "FoodBreak"@en .    
+
+onlim:LunchBreak
+  rdfs:subClassOf onlim:FoodBreak ;
+  a rdfs:Class ;
+  rdfs:label "LunchBreak"@en .
+  
+#####Subclasses of onlim:Market
+
+onlim:ExchangeMarket
+  a rdfs:Class ;
+  rdfs:label "ExchangeMarket"@en ;
+  rdfs:subClassOf onlim:Market .  
+  
+onlim:FarmersMarket
+  a rdfs:Class ;
+  rdfs:label "FarmersMarket"@en ;
+  rdfs:subClassOf onlim:Market .  
+ 
+#####Subclasses of onlim:Fair
+
+onlim:ConstructionFair
+  a rdfs:Class ;
+  rdfs:label "ConstructionFair"@en ;
+  rdfs:subClassOf onlim:Fair .
+  
+onlim:ElectronicFair
+  a rdfs:Class ;
+  rdfs:label "ElectronicFair"@en ;
+  rdfs:subClassOf onlim:Fair .
+
+onlim:FashionFair
+  a rdfs:Class ;
+  rdfs:label "FashionFair"@en ;
+  rdfs:subClassOf onlim:Fair .  
+  
+onlim:FoodFair
+  a rdfs:Class ;
+  rdfs:label "FoodFair"@en ;
+  rdfs:subClassOf onlim:Fair .  
+  
+onlim:HealthFair
+  a rdfs:Class ;
+  rdfs:label "HealthFair"@en ;
+  rdfs:subClassOf onlim:Fair .  
+
+onlim:HightechFair
+  a rdfs:Class ;
+  rdfs:label "HightechFair"@en ;
+  rdfs:subClassOf onlim:Fair .
+
+onlim:HomeGardenFair
+  a rdfs:Class ;
+  rdfs:label "HomeGardenFair"@en ;
+  rdfs:subClassOf onlim:Fair .
+
+onlim:HotelFair
+  a rdfs:Class ;
+  rdfs:label "HotelFair"@en ;
+  rdfs:subClassOf onlim:Fair .
+
+onlim:JewelryFair
+  a rdfs:Class ;
+  rdfs:label "JewelryFair"@en ;
+  rdfs:subClassOf onlim:Fair .
+  
+onlim:ToyFair
+  a rdfs:Class ;
+  rdfs:label "ToyFair"@en ;
+  rdfs:subClassOf onlim:Fair .  
+
+onlim:TravelFair
+  a rdfs:Class ;
+  rdfs:label "TravelFair"@en ;
+  rdfs:subClassOf onlim:Fair .    

@@ -1,0 +1,514 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix onlim: <http://onlim.com/schema/> .
+
+onlim:AboFood
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "AboFood"@en .
+
+onlim:AlpineDairy
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "AlpineDairy"@en . 
+
+onlim:ApresSki
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "ApresSki"@en .
+  
+onlim:Asian
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Asian"@en .
+
+onlim:AsianCuisine
+  a rdfs:Class ;
+  rdfs:label "Asiancuisine"@en ;
+  rdfs:subClassOf schema:FoodEstablishment .  
+
+onlim:Australian
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Australian"@en .  
+
+onlim:AustralianCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "AustralianCuisine"@en .  
+
+onlim:Austrian
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Austrian"@en .
+  
+onlim:AustrianCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "AustrianCuisine"@en .
+
+onlim:BeerGarden
+  rdfs:subClassOf schema:Restaurant ;
+  a rdfs:Class ;
+  rdfs:label "BeerGarden"@en .
+
+onlim:BioCuisine
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "BioCuisine"@en .
+  
+onlim:Bistro
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Bistro"@en .
+  
+onlim:Breakfast
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Breakfast"@en .
+
+onlim:BreakfastFoodEstablishment
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "BreakfastFoodEstablishment"@en .
+
+onlim:BreweryPub
+  rdfs:subClassOf schema:BarOrPub ;
+  a rdfs:Class ;
+  rdfs:label "BreweryPub"@en .
+
+onlim:Catalan
+  rdfs:subClassOf onlim:Mediterranean ;
+  a rdfs:Class ;
+  rdfs:label "Catalan"@en .
+
+onlim:CatalanCuisine
+  a rdfs:Class ;
+  rdfs:label "CatalanCuisine"@en ;  
+  rdfs:subClassOf onlim:MediterraneanCuisine .
+
+onlim:ChildrensMenu
+  rdfs:subClassOf schema:Restaurant ;
+  a rdfs:Class ;
+  rdfs:label "ChildrensMenu"@en .
+  
+onlim:Chinese
+  rdfs:subClassOf onlim:Asian ;
+  a rdfs:Class ;
+  rdfs:label "Chinese"@en .
+
+onlim:ChineseCuisine
+  a rdfs:Class ;
+  rdfs:label "ChineseCuisine"@en ;  
+  rdfs:subClassOf onlim:AsianCuisine .   
+
+onlim:CountrysideRestaurant
+  rdfs:subClassOf schema:Restaurant ;
+  a rdfs:Class ;
+  rdfs:label "CountrysideRestaurant"@en .  
+
+onlim:Creole
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Creole"@en .
+  
+onlim:CreoleCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "CreoleCuisine"@en .
+
+onlim:Creperie
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Creperie"@en .  
+  
+onlim:Cuisine
+  a rdfs:Class ;
+  rdfs:label "Cuisine"@en ;
+  rdfs:subClassOf schema:FoodEstablishment .
+    
+onlim:DiabeticFood
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "DiabeticFood"@en .
+  
+onlim:ExoticCuisine
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "ExoticCuisine"@en .
+  
+onlim:FishCuisine
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "FishCuisine"@en .  
+  
+onlim:Fondue
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Fondue"@en .
+  
+onlim:French
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "French"@en . 
+  
+onlim:FrenchCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "FrenchCuisine"@en . 
+  
+onlim:GlutenfreeFood
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "GlutenfreeFood"@en .
+  
+onlim:GourmetRestaurant
+  a rdfs:Class ;
+  rdfs:label "GourmetRestaurant"@en ;  
+  rdfs:subClassOf schema:Restaurant .
+
+onlim:Greek
+  rdfs:subClassOf onlim:Mediterranean ;
+  a rdfs:Class ;
+  rdfs:label "Greek"@en .
+
+onlim:GreekCuisine
+  a rdfs:Class ;
+  rdfs:label "GreekCuisine"@en ;  
+  rdfs:subClassOf onlim:MediterraneanCuisine .  
+
+onlim:GuestGarden
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "GuestGarden"@en .
+  
+onlim:GuideMichelin
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "GuideMichelin"@en .
+
+onlim:HauteCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "HauteCuisine"@en . 
+  
+onlim:HikingStop
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "HikingStop"@en .
+
+onlim:HomeCooking
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "HomeCooking"@en .
+
+onlim:HomeStyleFoodEstablishment
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "HomeStyleFoodEstablishment"@en .
+
+onlim:HotelBar
+  a rdfs:Class ;
+  rdfs:subClassOf schema:BarOrPub ;
+    rdfs:label "HotelBar"@en .
+
+onlim:Hungarian
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Hungarian"@en . 
+  
+onlim:HungarianCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "HungarianCuisine"@en . 
+  
+onlim:Hut
+  rdfs:subClassOf schema:FoodEstablishment, schema:LodgingBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Hut"@en .
+
+onlim:Indian
+  rdfs:subClassOf onlim:Asian ;
+  a rdfs:Class ;
+  rdfs:label "Indian"@en .
+
+onlim:IndianCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "IndianCuisine"@en . 
+
+onlim:Inn
+  a rdfs:Class ;
+  rdfs:label "Inn"@en ;
+  rdfs:subClassOf schema:FoodEstablishment, schema:LodgingBusiness .  
+
+onlim:InternationalCuisine
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "InternationalCuisine"@en .
+  
+onlim:Italian
+  rdfs:subClassOf onlim:Mediterranean ;
+  a rdfs:Class ;
+  rdfs:label "Italian"@en .
+
+onlim:ItalianCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:MediterraneanCuisine ;
+  rdfs:label "ItalianCuisine"@en .
+
+onlim:Japanese
+  rdfs:subClassOf onlim:Asian ;
+  a rdfs:Class ;
+  rdfs:label "Japanese"@en . 
+  
+onlim:JapaneseCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:AsianCuisine ;
+  rdfs:label "JapaneseCuisine"@en .  
+
+onlim:KoreanCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:AsianCuisine ;
+  rdfs:label "KoreanCuisine"@en .
+
+onlim:KosherCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "KosherCuisine"@en .
+
+onlim:LactosefreeFood
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "LactosefreeFood"@en .
+
+onlim:Lunch
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Lunch"@en .  
+  
+onlim:LunchFoodEstablishment
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+   rdfs:label "LunchFoodEstablishment"@en .
+
+onlim:LuxuryAmbienceFoodEstablishment
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+   rdfs:label "LuxuryAmbienceFoodEstablishment"@en .
+     
+onlim:Mediterranean
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Mediterranean"@en .  
+  
+onlim:MediterraneanCuisine
+  a rdfs:Class ;
+  rdfs:label "Mediterraneancuisine"@en ;
+  rdfs:subClassOf schema:FoodEstablishment .
+  
+onlim:Mexican
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Mexican"@en .
+  
+onlim:MexicanCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "MexicanCuisine"@en .
+  
+onlim:ModernAmbienceFoodEstablishment
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+    rdfs:label "ModernAmbienceFoodEstablishment"@en .
+    
+onlim:MountainHut
+  rdfs:subClassOf onlim:Hut ;
+  a rdfs:Class ;
+  rdfs:label "MountainHut"@en .    
+  
+onlim:NonSmokingLocale
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "NonSmokingLocale"@en .  
+  
+onlim:NouvelleCuisine
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "NouvelleCuisine"@en .  
+  
+onlim:Oriental
+  rdfs:subClassOf onlim:Asian ;
+  a rdfs:Class ;
+  rdfs:label "Oriental"@en .
+  
+onlim:OrientalCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Cuisine ;
+  rdfs:label "OrientalCuisine"@en .   
+  
+onlim:PastryShop
+  rdfs:subClassOf schema:CafeOrCoffeeShop ;
+  a rdfs:Class ;
+  rdfs:label "PastryShop"@en .  
+  
+onlim:Pizzeria
+  rdfs:subClassOf schema:Restaurant ;
+  a rdfs:Class ;
+  rdfs:label "Pizzeria"@en .    
+
+onlim:Portuguese
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Portuguese"@en .
+  
+onlim:PortugueseCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "PortugueseCuisine"@en .  
+  
+onlim:RescueHut
+  rdfs:subClassOf onlim:Hut ;
+  a rdfs:Class ;
+  rdfs:label "RescueHut"@en .  
+  
+onlim:RoadsideRestaurant
+  rdfs:subClassOf schema:Restaurant ;
+  a rdfs:Class ;
+  rdfs:label "RoadsideRestaurant"@en .  
+  
+onlim:RusticRestaurant
+  rdfs:subClassOf schema:Restaurant ;
+  a rdfs:Class ;
+  rdfs:label "RusticRestaurant"@en .
+  
+onlim:ServicedHut
+  a rdfs:Class ;
+  rdfs:label "ServicedHut"@en ;  
+  rdfs:subClassOf onlim:Hut .    
+  
+onlim:Snackbar
+  rdfs:subClassOf schema:BarOrPub, schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Snackbar"@en .  
+  
+onlim:Spanish
+  rdfs:subClassOf onlim:Mediterranean ;
+  a rdfs:Class ;
+  rdfs:label "Spanish"@en .
+
+onlim:SpanishCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "SpanishCuisine"@en .  
+    
+onlim:SportsBar
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "SportsBar"@en .
+  
+onlim:StarRatedRestaurant
+  rdfs:subClassOf schema:Restaurant ;
+  a rdfs:Class ;
+  rdfs:label "StarRatedRestaurant"@en .
+
+onlim:SteakHouse 
+  rdfs:subClassOf schema:Restaurant ;
+  a rdfs:Class ;
+  rdfs:label "SteakHouse"@en .
+   
+onlim:Swiss
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Swiss"@en .
+  
+onlim:SwissCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "SwissCuisine"@en .  
+  
+onlim:TakeAway
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "TakeAway"@en .
+
+onlim:Tavern
+  rdfs:subClassOf schema:BarOrPub, schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Tavern"@en .  
+  
+onlim:Thai
+  rdfs:subClassOf onlim:Asian ;
+  a rdfs:Class ;
+  rdfs:label "Thai"@en .  
+    
+onlim:ThaiCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "ThaiCuisine"@en .  
+  
+onlim:Traditional
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "Traditional"@en .  
+
+onlim:TraditionalCuisine
+  a rdfs:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:label "TraditionalCuisine"@en .  
+
+onlim:Turkish
+  rdfs:subClassOf onlim:Mediterranean ;
+  a rdfs:Class ;
+  rdfs:label "Turkish"@en .
+  
+onlim:TurkishCuisine
+  a rdfs:Class ;
+  rdfs:label "TurkishCuisine"@en ;  
+  rdfs:subClassOf onlim:MediterraneanCuisine .  
+  
+onlim:VeganRestaurant
+  rdfs:subClassOf schema:Restaurant ;
+  a rdfs:Class ;
+  rdfs:label "VeganRestaurant"@en .
+
+onlim:VegetarianRestaurant
+  rdfs:subClassOf schema:Restaurant ;
+  a rdfs:Class ;
+  rdfs:label "VegetarianRestaurant"@en .
+
+onlim:Vietnamese
+  rdfs:subClassOf onlim:Asian ;
+  a rdfs:Class ;
+  rdfs:label "Vietnamese"@en .
+  
+onlim:VietnameseCuisine
+  a rdfs:Class ;
+  rdfs:label "VietnameseCuisine"@en ;  
+  rdfs:subClassOf onlim:AsianCuisine .  
+  
+onlim:WineBar    
+  a rdfs:Class ;
+  rdfs:label "WineBar"@en ;  
+  rdfs:subClassOf schema:BarOrPub .     
+  
+onlim:WineSeminar
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "WineSeminar"@en .  
+  
+onlim:WineTesting
+  rdfs:subClassOf schema:FoodEstablishment ;
+  a rdfs:Class ;
+  rdfs:label "WineTesting"@en .  
+  

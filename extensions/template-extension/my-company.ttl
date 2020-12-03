@@ -1,0 +1,22 @@
+@prefix dachkg: <http://http://dachkg.org/ontology/1.0/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix my-comp: <https://my-company.org/ontology/1.0/> .
+
+##Classes
+
+my-comp:Heurigen a rdfs:Class ;
+    rdfs:label "Heurigen" ;
+    rdfs:comment "A place where you consume housmade wine." ;
+    rdfs:subClassOf schema:LocalBusiness ;
+    rdfs:subClassOf schema:Winery .
+
+#Properties
+
+my-comp:wineOfTheDay a rdf:Property ;
+    rdfs:label "wineOfTheDay" ;
+    schema:domainIncludes my-comp:Heurigen ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "The wine of the day sold in a Heurigen." ;
+    rdfs:subPropertyOf dachkg:drinkOfTheDay .

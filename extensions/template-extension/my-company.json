@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "dachkg": "http://http://dachkg.org/ontology/1.0/",
+    "my-comp": "https://my-company.org/ontology/1.0/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "my-comp:Heurigen",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A place where you consume housmade wine.",
+      "rdfs:label": "Heurigen",
+      "rdfs:subClassOf": [
+        {
+          "@id": "schema:LocalBusiness"
+        },
+        {
+          "@id": "schema:Winery"
+        }
+      ]
+    },
+    {
+      "@id": "my-comp:wineOfTheDay",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The wine of the day sold in a Heurigen.",
+      "rdfs:label": "wineOfTheDay",
+      "rdfs:subPropertyOf": {
+        "@id": "dachkg:drinkOfTheDay"
+      },
+      "schema:domainIncludes": {
+        "@id": "my-comp:Heurigen"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    }
+  ]
+}

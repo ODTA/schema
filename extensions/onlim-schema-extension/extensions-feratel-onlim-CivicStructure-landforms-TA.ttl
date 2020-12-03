@@ -1,0 +1,533 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix onlim: <http://onlim.com/schema/> .
+
+#### Subclasses of Place
+
+onlim:BusConnection
+  a rdfs:Class ;
+  rdfs:label "BusConnection"@en ;
+  rdfs:subClassOf schema:Place .
+  
+onlim:District
+  a rdfs:Class ;
+  rdfs:label "District"@en ;
+  rdfs:comment "A district in a country (refers to adminLevel 6 in OSM)" ;
+  rdfs:subClassOf schema:AdministrativeArea .
+
+onlim:ExhibitionVenue
+  a rdfs:Class ;
+  rdfs:label "ExhibitionVenue"@en ;
+  rdfs:subClassOf schema:Place .   
+
+onlim:GeoFacility
+  a rdfs:Class ;
+  rdfs:label "GeoFacility"@en ;
+  rdfs:subClassOf schema:Place .
+
+onlim:Lock
+  a rdfs:Class ;
+  rdfs:label "Lock"@en ;
+  rdfs:subClassOf schema:Place .  
+  
+onlim:MeetingPlace
+  a rdfs:Class ;
+  rdfs:label "MeetingPlace"@en ;
+  rdfs:subClassOf schema:Place .
+  
+onlim:Mooring
+  a rdfs:Class ;
+  rdfs:label "Mooring"@en ;
+  rdfs:subClassOf schema:Place .  
+    
+onlim:MunicipalCoatOfArms
+  a rdfs:Class ;
+  rdfs:label "MunicipalCoatOfArms"@en ;
+  rdfs:subClassOf schema:Place .    
+  
+onlim:Rectory
+  a rdfs:Class ;
+  rdfs:label "Rectory"@en ;
+  rdfs:subClassOf schema:Place .
+  
+onlim:Region 
+  a rdfs:Class ;
+  rdfs:label "Region"@en ;
+  rdfs:subClassOf schema:AdministrativeArea .      
+
+onlim:SubDistrict
+  a rdfs:Class ;
+  rdfs:label "SubDistrict"@en ;
+  rdfs:comment "A sub district in a country (refers to adminLevel 5 in osm)" ;
+  rdfs:subClassOf onlim:District .  
+  
+schema:TouristDestination
+  a rdfs:Class ;
+  rdfs:label "TouristDestination"@en ;
+  rdfs:subClassOf schema:AdministrativeArea .  
+  
+onlim:ViewPoint
+  rdfs:subClassOf schema:Place ;
+  a rdfs:Class ;
+  rdfs:label "ViewPoint"@en .
+
+onlim:Vineyard
+  a rdfs:Class ;
+  rdfs:label "Vineyard"@en ;
+  rdfs:subClassOf schema:Place .
+ 
+schema:EventsVenue
+  a rdfs:Class ;
+  rdfs:label "Eventsvenue"@en ;
+  rdfs:subClassOf schema:Place . 
+ 
+#### Subclasses of CivicStructure    
+
+onlim:AdventurePark
+  rdfs:subClassOf schema:Park ;
+  a rdfs:Class ;
+  rdfs:label "AdventurePark"@en .  
+
+onlim:ArtNouveau
+  a rdfs:Class ;
+  rdfs:label "ArtNouveau"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+  
+onlim:BarbecueHut
+  a rdfs:Class ;
+  rdfs:label "BarbecueHut"@en ;
+  rdfs:subClassOf onlim:Building .  
+  
+onlim:Baroque
+  a rdfs:Class ;
+  rdfs:label "Baroque"@en ;
+  rdfs:subClassOf schema:CivicStructure .  
+  
+onlim:Basilica
+  a rdfs:Class ;
+  rdfs:label "Basilica"@en ;
+  rdfs:subClassOf schema:PlaceOfWorship .
+
+onlim:BikeGarage
+  a rdfs:Class ;
+  rdfs:label "BikeGarage"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:BikeShelter
+  a rdfs:Class ;
+  rdfs:label "BikeShelter"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:BirdPark
+  a rdfs:Class ;
+  rdfs:label "BirdPark"@en ;
+  rdfs:subClassOf schema:Park .
+
+onlim:BorderCheckpoint
+  a rdfs:Class ;
+  rdfs:label "BorderCheckpoint"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:Building
+  a rdfs:Class ;
+  rdfs:label "Building"@en ;
+  rdfs:subClassOf schema:CivicStructure .  
+  
+onlim:BusParkingFacility
+  rdfs:subClassOf schema:ParkingFacility ;
+  a rdfs:Class ;
+  rdfs:label "BusParkingFacility"@en .   
+
+onlim:Cathedral
+  a rdfs:Class ;
+  rdfs:label "Cathedral"@en ;
+  rdfs:subClassOf schema:PlaceOfWorship .
+
+onlim:Celt
+  a rdfs:Class ;
+  rdfs:label "Celt"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:Chapel
+  rdfs:subClassOf schema:PlaceOfWorship ;
+  a rdfs:Class ;
+  rdfs:label "Chapel"@en .  
+
+onlim:Classical
+  a rdfs:Class ;
+  rdfs:label "Classical"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:ConferenceHall
+  a rdfs:Class ;
+  rdfs:label "ConferenceHall"@en ;
+  rdfs:subClassOf schema:CivicStructure .  
+  
+onlim:CongressCenter
+  a rdfs:Class ;
+  rdfs:label "CongressCenter"@en ;
+  rdfs:subClassOf schema:EventVenue .  
+    
+onlim:Crossroad
+  a rdfs:Class ;
+  rdfs:label "Crossroad"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:CulturalAmbassador
+  a rdfs:Class ;
+  rdfs:label "CulturalAmbassador"@en ;
+  rdfs:subClassOf schema:Embassy .  
+  
+onlim:Dike
+  a rdfs:Class ;
+  rdfs:label "CulturalAmbassador"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+  
+onlim:Dome
+  a rdfs:Class ;
+  rdfs:label "Dome"@en ;
+  rdfs:subClassOf schema:Church . 
+  
+onlim:Gothic
+  a rdfs:Class ;
+  rdfs:label "Gothic"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:Harbour
+  a rdfs:Class ;
+  rdfs:label "Harbour"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+  
+onlim:Historic
+  a rdfs:Class ;
+  rdfs:label "Historic"@en ;
+  rdfs:subClassOf schema:CivicStructure .  
+
+onlim:Ladder
+  a rdfs:Class ;
+  rdfs:label "Ladder"@en ;
+  rdfs:subClassOf schema:CivicStructure .  
+  
+onlim:LandingSpot
+  a rdfs:Class ;
+  rdfs:label "LandingSpot"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+  
+onlim:Minster
+  a rdfs:Class ;
+  rdfs:label "Minster"@en ;
+  rdfs:subClassOf schema:Church .
+
+onlim:Modern
+  a rdfs:Class ;
+  rdfs:label "Modern"@en ;
+  rdfs:subClassOf schema:CivicStructure .  
+
+onlim:NationalPark
+  a rdfs:Class ;
+  rdfs:label "NationalPark"@en ;
+  rdfs:subClassOf schema:Park .
+  
+onlim:Neogothic
+  a rdfs:Class ;
+  rdfs:label "Neogothic"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:Observatory
+  rdfs:subClassOf schema:CivicStructure ;
+  a rdfs:Class ;
+  rdfs:label "Observatory"@en .
+
+onlim:OpenAirMuseum
+  a rdfs:Class ;
+  rdfs:label "OpenAirMuseum"@en ;
+  rdfs:subClassOf schema:Museum .
+  
+onlim:PassageUnderground
+  a rdfs:Class ;
+  rdfs:label "PassageUnderground"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+  
+onlim:PatricianHouse
+  a rdfs:Class ;
+  rdfs:label "PatricianHouse"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:PedestrianZone
+  a rdfs:Class ;
+  rdfs:label "PedestrianZone"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:Pilgrimage
+  a rdfs:Class ;
+  rdfs:label "Pilgrimage"@en ;
+  rdfs:subClassOf schema:PlaceOfWorship .
+
+onlim:Planetarium
+  a rdfs:Class ;
+  rdfs:label "Planetarium"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+  
+onlim:PublicTransport
+  a rdfs:Class ;
+  rdfs:label "PublicTransport"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+  
+onlim:Renaissance
+  a rdfs:Class ;
+  rdfs:label "Renaissance"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+  
+onlim:RestArea
+  a rdfs:Class ;
+  rdfs:label "RestArea"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:RestingBench
+  a rdfs:Class ;
+  rdfs:label "RestingBench"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:Roman
+  a rdfs:Class ;
+  rdfs:label "Roman"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:Romanesque
+  a rdfs:Class ;
+  rdfs:label "Romanesque"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+
+onlim:Romantic
+  a rdfs:Class ;
+  rdfs:label "Romantic"@en ;
+  rdfs:subClassOf schema:CivicStructure .  
+  
+onlim:Saline
+  a rdfs:Class ;
+  rdfs:label "Saline"@en ;
+  rdfs:subClassOf schema:CivicStructure .    
+  
+onlim:SignPost
+  a rdfs:Class ;
+  rdfs:label "SignPost"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+  
+onlim:SnowReportWeatherStation
+  a rdfs:Class ;
+  rdfs:label "SnowReportWeatherStation"@en ;
+  rdfs:subClassOf onlim:WeatherStation . 
+
+onlim:TrailConditionsWeatherStation
+  a rdfs:Class ;
+  rdfs:label "TrailConditionsWeatherStation"@en ;
+  rdfs:subClassOf onlim:WeatherStation .
+  
+onlim:TechnicalBuilding
+  a rdfs:Class ;
+  rdfs:label "TechnicalBuilding"@en ;
+  rdfs:subClassOf onlim:Building .  
+  
+onlim:TimberBuilding
+  a rdfs:Class ;
+  rdfs:label "TimberBuilding"@en ;
+  rdfs:subClassOf schema:CivicStructure .
+  
+onlim:WaterPlayground
+  a rdfs:Class ;
+  rdfs:label "WaterPlayground"@en ;
+  rdfs:subClassOf schema:Playground .    
+  
+onlim:WaterTemperatureWeatherStation
+  a rdfs:Class ;
+  rdfs:label "WaterTemperatureWeatherStation"@en ;
+  rdfs:subClassOf onlim:WeatherStation .
+
+onlim:WayOfCross
+  rdfs:subClassOf schema:PlaceOfWorship ;
+  a rdfs:Class ;
+  rdfs:label "WayOfCross"@en .
+
+onlim:WeatherStation
+  rdfs:label "Weatherstation"@en, "WeatherStation"@en ;
+  rdfs:subClassOf schema:CivicStructure ;
+  a rdfs:Class .
+
+onlim:WebCam
+  rdfs:subClassOf schema:CivicStructure ;
+  a rdfs:Class ;
+  rdfs:label "WebCam"@en .
+  
+  
+####### Subclasses of Landform
+onlim:AlpineGarden
+  a rdfs:Class ;
+  rdfs:label "AlpineGarden"@en ;
+  rdfs:subClassOf schema:Landform .
+  
+onlim:Cave
+  rdfs:subClassOf schema:Landform ;
+  a rdfs:Class ;
+  rdfs:label "Cave"@en .
+  
+onlim:Cliff
+  a rdfs:Class ;
+  rdfs:label "Cliff"@en ;
+  rdfs:subClassOf schema:Landform .  
+
+onlim:Crater
+  a rdfs:Class ;
+  rdfs:label "Crater"@en ;
+  rdfs:subClassOf schema:Landform .
+  
+onlim:GeoTop
+  a rdfs:Class ;
+  rdfs:label "Geotop"@en ;
+  rdfs:subClassOf schema:Landform . 
+
+onlim:Maar
+  a rdfs:Class ;
+  rdfs:label "Maar"@en ;
+  rdfs:subClassOf schema:Landform .
+  
+onlim:MeadowLandscape
+  a rdfs:Class ;
+  rdfs:label "MeadowLandscape"@en ;
+  rdfs:subClassOf schema:Landform .  
+  
+onlim:MountainTop
+  a rdfs:Class ;
+  rdfs:label "MountainTop"@en ;
+  rdfs:subClassOf onlim:GeoTop . 
+
+onlim:NaturalHabitat
+  a rdfs:Class ;
+  rdfs:label "NaturalHabitat"@en ;
+  rdfs:subClassOf schema:Landform .  
+  
+onlim:NaturePath
+  a rdfs:Class ;
+  rdfs:label "NaturePath"@en ;
+  rdfs:subClassOf schema:Landform .
+
+onlim:NatureReserve
+  a rdfs:Class ;
+  rdfs:label "NatureReserve"@en ;
+  rdfs:subClassOf schema:Landform . 
+
+onlim:SwimmingPond
+  rdfs:subClassOf schema:LakeBodyOfWater ;
+  a rdfs:Class ;
+  rdfs:label "SwimmingPond"@en .  
+  
+onlim:Spring
+  a rdfs:Class ;
+  rdfs:label "Spring"@en ;
+  rdfs:subClassOf schema:BodyOfWater .  
+
+  
+onlim:SmokingRoom
+  a rdfs:Class ;
+  rdfs:label "SmokingRoom"@en ;
+  rdfs:subClassOf schema:Place .
+    
+#### Subclasses of LandmarksOrHistoricalBuildings 
+
+onlim:ArchaeologicalSite
+  a rdfs:Class ;
+  rdfs:label "ArchaeologicalSite"@en ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings .
+  
+onlim:Castle
+  a rdfs:Class ;
+  rdfs:label "Castle"@en ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings .
+  
+onlim:CityTower
+  a rdfs:Class ;
+  rdfs:label "CityTower"@en ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings .
+
+onlim:CityWall
+  a rdfs:Class ;
+  rdfs:label "CityWall"@en ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings .
+
+onlim:Fortress
+  a rdfs:Class ;
+  rdfs:label "Fortress"@en ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings .
+  
+onlim:Palace
+  a rdfs:Class ;
+  rdfs:label "Palace"@en ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings .
+  
+onlim:Ruins
+  a rdfs:Class ;
+  rdfs:label "Ruins"@en ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings .
+  
+onlim:Square
+  a rdfs:Class ;
+  rdfs:label "Square"@en ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings .  
+  
+
+onlim:TownSquare
+  a rdfs:Class ;
+  rdfs:label "TownSquare"@en ;
+  rdfs:subClassOf onlim:Square .  
+
+#### Subclasses of TouristAttactions
+
+onlim:Fountain
+  rdfs:subClassOf schema:TouristAttraction ;
+  a rdfs:Class ;
+  rdfs:label "Fountain"@en .
+  
+onlim:FolkloreAttraction
+  a rdfs:Class ;
+  rdfs:label "FolkloreAttraction"@en ;
+  rdfs:subClassOf schema:TouristAttraction .   
+  
+onlim:IndustrialMonument
+  a rdfs:Class ;
+  rdfs:label "IndustrialMonument"@en ;
+  rdfs:subClassOf onlim:Monument .     
+
+onlim:Monument
+  a rdfs:Class ;
+  rdfs:label "Monument"@en ;
+  rdfs:subClassOf schema:TouristAttraction .
+
+onlim:NaturalMonument
+  rdfs:subClassOf onlim:Monument ;
+  a rdfs:Class ;
+  rdfs:label "NaturalMonument"@en .
+
+onlim:Sightseeing
+  rdfs:subClassOf schema:TouristAttraction ;
+  a rdfs:Class ;
+  rdfs:label "Sightseeing"@en .
+  
+onlim:UnescoWorldHeritageSite
+  a rdfs:Class ;
+  rdfs:label "UnescoWorldHeritageSite"@en ;
+  rdfs:subClassOf onlim:WorldHeritageAttraction .
+
+onlim:WorldHeritageAttraction
+  a rdfs:Class ;
+  rdfs:label "Worldheritageattraction"@en ;
+  rdfs:subClassOf schema:TouristAttraction .    
+ 

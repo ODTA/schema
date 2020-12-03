@@ -1,0 +1,1365 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix onlim: <http://onlim.com/schema/> .
+
+onlim:AdventureSports
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "AdventureSports"@en .  
+  
+onlim:AdventurePool
+  a rdfs:Class ;
+  rdfs:subClassOf schema:PublicSwimmingPool ;
+  rdfs:label "AdventurePool"@en .    
+
+onlim:AerialTramway
+  rdfs:subClassOf onlim:SkiLift ;
+  a rdfs:Class ;
+  rdfs:label "AerialTramway"@en . 
+
+onlim:AerialTramwayTwoStorey
+  rdfs:subClassOf onlim:AerialTramway ;
+  a rdfs:Class ;
+  rdfs:label "AerialTramwayTwoStorey"@en .    
+  
+onlim:AirBoard
+  rdfs:subClassOf onlim:FunPark ;
+  a rdfs:Class ;
+  rdfs:label "AirBoard"@en .  
+  
+onlim:Airboarding
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Airboarding"@en .  
+  
+onlim:AirSports
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Airsports"@en, "AirSports"@en .  
+ 
+onlim:AlpineClimbing
+  rdfs:subClassOf onlim:Mountaineering ;
+  a rdfs:Class ;
+  rdfs:label "AlpineClimbing"@en .
+  
+onlim:AlpineExcursion
+  rdfs:subClassOf onlim:Excursion ;
+  a rdfs:Class ;
+  rdfs:label "AlpineExcursion"@en .
+
+onlim:AlpineHike
+  rdfs:subClassOf onlim:Hiking ;
+  a rdfs:Class ;
+  rdfs:label "AlpineHike"@en .
+  
+onlim:AlpineSkiing
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "AlpineSkiing"@en . 
+  
+onlim:AlpineTour
+  rdfs:subClassOf onlim:Mountaineering ;
+  a rdfs:Class ;
+  rdfs:label "AlpineTour"@en .  
+  
+onlim:ArcheryRange
+  a rdfs:Class ;
+  rdfs:label "ArcheryRange"@en ;
+  rdfs:subClassOf onlim:Shooting .  
+
+onlim:ArtificialIce
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "ArtificialIce"@en .  
+  
+onlim:AsphaltCurling
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Curling ;
+  rdfs:label "AsphaltCurling"@en .
+  
+onlim:AthleticSports
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "AthleticSports"@en .
+  
+onlim:AutogenicTraining
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "AutogenicTraining"@en .  
+ 
+onlim:Badminton
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "AutogenicTraining"@en .  
+
+onlim:BananaRide
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "BananaRide"@en .
+  
+onlim:Basketball
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "Basketball"@en .
+
+onlim:BavarianCurling
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Curling ;   
+  rdfs:label "BavarianCurling"@en .
+  
+ onlim:BeachSoccer
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Soccer ;
+  rdfs:label "BeachSoccer"@en .
+
+onlim:BeachVolleyball
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Volleyball ;
+  rdfs:label "BeachVolleyball"@en . 
+  
+onlim:BicycleMotocross
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "BicycleMotocross"@en.
+  
+onlim:BicycleTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Biking, onlim:Trail ;
+  rdfs:label "BicycleTrail"@en .  
+
+onlim:BigFoot
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "BigFoot"@en.
+
+onlim:BikeTour
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Tour ;
+  rdfs:label "BikeTour"@en .  
+  
+onlim:Bikeboarding
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "Bikeboarding"@en .
+
+onlim:Biking
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Trail, schema:SportsActivityLocation ;
+  rdfs:label "Biking"@en .   
+  
+onlim:BikingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Biking ;
+  rdfs:label "Bikingtrail"@en .  
+
+onlim:Billiards
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:CueSports ;  
+  rdfs:label "Billiards"@en .  
+  
+onlim:BoarderCross
+  rdfs:subClassOf onlim:FunPark ;
+  a rdfs:Class ;
+  rdfs:label "BoarderCross"@en .  
+  
+onlim:Boating
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "Boating"@en .
+  
+onlim:BoatTrip
+  a rdfs:Class ;
+  rdfs:label "BoatTrip"@en ;
+  rdfs:subClassOf schema:Trip .    
+
+onlim:BobSledding 
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Sledding ;
+  rdfs:label "BobSledding"@en .    
+  
+onlim:BocciaBoule
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  a rdfs:Class ;
+  rdfs:label "BocciaBoule"@en .  
+  
+onlim:BowShooting
+   a rdfs:Class ;
+   rdfs:subClassOf onlim:Shooting ;
+   rdfs:label "Bowshooting"@en, "BowShooting"@en .
+
+onlim:BungeeJumping
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "BungeeJumping"@en .
+
+onlim:BungeeRunning
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "BungeeRunning"@en .  
+
+onlim:ButtonLift
+  rdfs:subClassOf onlim:SkiLift ;
+  a rdfs:Class ;
+  rdfs:label "ButtonLift"@en .   
+
+onlim:CableCar
+  rdfs:subClassOf onlim:SkiLift ;
+  a rdfs:Class ;
+  rdfs:label "CableCar"@en .
+
+onlim:Canoeing
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Canoeing"@en . 
+  
+onlim:CanoeingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WaterTrail ;  
+  rdfs:label "CanoeingTrail"@en .  
+  
+onlim:Canyoning
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Canyoning"@en .
+
+onlim:CanyoningTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WaterTrail ;
+  rdfs:label "CanyoningTrail"@en .
+
+onlim:CarriageRide
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "CarriageRide"@en .
+
+onlim:CarriageRideTrail
+  rdfs:subClassOf onlim:Equestrian ;
+  a rdfs:Class ;
+  rdfs:label "CarriageRideTrail"@en .
+
+onlim:CaveTour
+  rdfs:subClassOf onlim:Tour ;
+  a rdfs:Class ;
+  rdfs:label "CaveTour"@en .
+  
+onlim:ChairLift
+  rdfs:subClassOf onlim:SkiLift ;
+  a rdfs:Class ;
+  rdfs:label "ChairLift"@en .
+    
+onlim:ChairLiftGondola
+  rdfs:subClassOf onlim:CableCar, onlim:ChairLift ;
+  a rdfs:Class ;
+  rdfs:label "ChairLiftGondola"@en .
+  
+onlim:Chess
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Chess"@en .
+
+onlim:ChiGong
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "ChiGong"@en .
+
+onlim:ChildrensArea
+  rdfs:subClassOf onlim:FunPark ;
+  a rdfs:Class ;
+  rdfs:label "ChildrensArea"@en .
+  
+onlim:CityTrail
+  a rdfs:Class ;
+  rdfs:label "Citytrail"@en, "CityTrail"@en ;
+  rdfs:subClassOf onlim:Trail .    
+  
+onlim:Climbing
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "Climbing"@en .
+  
+onlim:CrossCountrySki
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WinterTrail, schema:SportsActivityLocation ;
+  rdfs:label "CrossCountrySki"@en .   
+  
+onlim:CrossbowShooting
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:BowShooting ;
+  rdfs:label "CrossbowShooting"@en .  
+  
+onlim:CueSports
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Cuesports"@en, "CueSports"@en .  
+
+onlim:Curling
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Curling"@en .
+
+onlim:CulturalTour
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "CulturalTour"@en .
+  
+onlim:Darts
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "CulturalTour"@en .  
+  
+onlim:Diving
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Diving"@en .
+
+onlim:DogSledTrip
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "DogSledTrip"@en .
+
+onlim:DownhillBiking
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Biking, schema:SportsActivityLocation ;
+  rdfs:label "DownhillBiking"@en .
+
+onlim:DropZone
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "DropZone"@en .  
+  
+onlim:EBike
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "EBike"@en .  
+  
+onlim:Equestrian
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Trail ;
+  rdfs:label "Equestrian"@en .   
+    
+onlim:Excursion
+  a rdfs:Class ;
+  rdfs:subClassOf schema:LocalBusiness, schema:SportsActivityLocation ;
+  rdfs:label "Excursion"@en .  
+  
+onlim:ExerciseLift
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "ExerciseLift"@en .   
+  
+onlim:Fencing
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "Fencing"@en .  
+  
+onlim:Fishing
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Fishing"@en .  
+  
+onlim:FishingLocation
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "FishingLocation"@en .
+  
+onlim:FishingTour
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WaterTrail ;  
+  rdfs:label "FishingTour"@en .  
+  
+onlim:FitnessTrail
+  a rdfs:Class ;
+  rdfs:label "FitnessTrail"@en ;
+  rdfs:subClassOf schema:SportsActivityLocation .  
+  
+schema:Flight 
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation, schema:Trip ;
+  rdfs:label "Flight" ;
+  rdfs:comment "An airline flight." .   
+  
+onlim:FlyingFox
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "FlyingFox"@en .
+
+onlim:FlyingSportsLocation
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "FlyingSportsLocation"@en .
+  
+onlim:FreeridingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WinterTrail ;  
+  rdfs:label "FreeridingTrail"@en .  
+
+onlim:Funicular
+  rdfs:subClassOf onlim:SkiLift ;
+  a rdfs:Class ;
+  rdfs:label "Funicular"@en .
+
+onlim:Funitel
+  rdfs:subClassOf onlim:SkiLift ;
+  a rdfs:Class ;
+  rdfs:label "Funitel"@en .
+    
+onlim:FunPark
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "Funpark"@en, "FunPark"@en .
+   
+onlim:Geocaching
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "Geocaching"@en .  
+  
+onlim:GeoTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Hiking ;
+  rdfs:label "GeoTrail"@en .   
+  
+onlim:GlacierSkiing
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Skiing ;  
+  rdfs:label "GlacierSkiing"@en .  
+  
+onlim:Gliding
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Gliding"@en .  
+  
+onlim:GoCartDriving
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "GoCartDriving"@en .  
+  
+onlim:GuestSledding 
+  rdfs:subClassOf onlim:Sledding ;
+  a rdfs:Class ;
+  rdfs:label "GuestSledding"@en . 
+ 
+onlim:GuidedExcursion
+  rdfs:subClassOf onlim:Excursion ;
+  a rdfs:Class ;
+  rdfs:label "GuidedExcursion"@en .
+
+onlim:GuidedHikingTour
+  a rdfs:Class ;
+  rdfs:label "GuidedHikingTour"@en ;
+  rdfs:subClassOf onlim:HikingTour .
+
+onlim:GuidedHorseRiding
+  a rdfs:Class ;
+  rdfs:label "GuidedHorseRiding"@en ;
+  rdfs:subClassOf onlim:HorseRiding .
+  
+onlim:Gymnastics
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Gymnastics"@en .  
+  
+onlim:HalfPipe
+  rdfs:subClassOf onlim:FunPark ;
+  a rdfs:Class ;
+  rdfs:label "HalfPipe"@en .
+  
+onlim:HammerheadSledding 
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Sledding ;
+  rdfs:label "HammerheadSledding"@en .   
+  
+onlim:HandcarTour
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Tour ;
+  rdfs:label "HandcarTour"@en .  
+
+onlim:HangGliding
+  rdfs:subClassOf onlim:AirSports ;
+  a rdfs:Class ;
+  rdfs:label "HangGliding"@en .
+  
+onlim:HelicopterFlight
+  rdfs:subClassOf schema:Flight ;
+  a rdfs:Class ;
+  rdfs:label "HelicopterFlight"@en .   
+  
+onlim:Hiking
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Trail, schema:SportsActivityLocation ;
+  rdfs:label "Hiking"@en .  
+  
+onlim:HikingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Hiking ;
+  rdfs:label "HikingTrail"@en .  
+  
+onlim:HikingTour
+  a rdfs:Class ;
+  rdfs:label "Hikingtour"@en ;
+  rdfs:subClassOf onlim:Tour .  
+  
+onlim:Hockey
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Hockey"@en .   
+
+onlim:HorsebackRidingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Equestrian ;
+  rdfs:label "HorsebackRidingTrail"@en .   
+  
+onlim:HorseDrawnSleighTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Equestrian ;
+  rdfs:label "HorseDrawnSleighTrail"@en .  
+  
+onlim:HorseRacetrack
+  rdfs:subClassOf onlim:HorseRiding ;
+  a rdfs:Class ;
+  rdfs:label "HorseRacetrack"@en .
+
+onlim:HorseRiding
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Riding, schema:SportsActivityLocation ;
+  rdfs:label "Horseriding"@en, "HorseRiding"@en .  
+
+onlim:HorseRidingCenter
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "HorseRidingCenter"@en .
+
+onlim:HorseRidingPath
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "HorseRidingPath"@en .
+
+onlim:HorseTrailRiding
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:HorseRiding ; 
+  rdfs:label "HorseTrailRiding"@en .  
+     
+onlim:HorseTrekking
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Trekking ;
+  rdfs:label "HorseTrekking"@en .
+
+onlim:HotAirBallonRide
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "HotAirBallonRide"@en . 
+  
+onlim:Hotrocket
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Hotrocket"@en .  
+
+onlim:HouseRunning
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "HouseRunning"@en .  
+  
+onlim:Hunting
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Hunting"@en .
+
+onlim:Hydrospeeding
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Hydrospeeding"@en .
+  
+onlim:IceClimbing
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Climbing ;
+  rdfs:label "IceClimbing"@en .
+  
+onlim:IceClimbingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WinterTrail ;  
+  rdfs:label "IceClimbingTrail"@en .
+
+onlim:IceDiving
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Diving ;
+  rdfs:label "IceDiving"@en .
+  
+onlim:IceHockey
+  rdfs:subClassOf onlim:Hockey ;
+  a rdfs:Class ;
+  rdfs:label "IceHockey"@en .  
+    
+onlim:IceSailing 
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "IceSailing"@en .
+
+onlim:IceSkating
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:IceSportsLocation ;
+  rdfs:label "IceSkating"@en .
+
+onlim:IceSportsLocation
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Icesportslocation"@en .
+  
+onlim:IceTour
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WinterTrail ;  
+  rdfs:label "IceTour"@en .   
+  
+onlim:InclineElevator
+  rdfs:subClassOf onlim:SkiLift ;
+  a rdfs:Class ;
+  rdfs:label "InclineElevator"@en .
+  
+onlim:IndoorActivities
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "IndoorActivities"@en .
+    
+onlim:IndoorClimbing
+  rdfs:subClassOf onlim:Climbing ;
+  a rdfs:Class ;
+  rdfs:label "IndoorClimbing"@en .
+  
+onlim:IndoorCourts
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "IndoorCourts"@en .
+
+onlim:IndoorGolf
+  a rdfs:Class ;
+  rdfs:subClassOf schema:GolfCourse ;
+  rdfs:label "IndoorGolf"@en .
+
+onlim:IndoorPublicSwimmingPool
+  a rdfs:Class ;
+  rdfs:subClassOf schema:PublicSwimmingPool ;
+  rdfs:label "IndoorPublicSwimmingPool"@en .
+
+onlim:IndoorTennisCourt
+  a rdfs:Class ;
+  rdfs:subClassOf schema:TennisComplex ;
+  rdfs:label "IndoorTennisCourt"@en .
+  
+onlim:InlineHockey
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Hockey ;
+  rdfs:label "InlineHockey"@en .
+
+onlim:InlineSkating
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "InlineSkating"@en .
+  
+onlim:InlineSkatingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:SkatingTrail ;  
+  rdfs:label "InlineSkatingTrail"@en .    
+  
+onlim:JoggingTrail
+  rdfs:subClassOf onlim:RunningTrail ;
+  a rdfs:Class ;
+  rdfs:label "JoggingTrail"@en .  
+  
+onlim:Judo
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Judo"@en .
+
+onlim:Jumping
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:AirSports, schema:SportsActivityLocation ;  
+  rdfs:label "Jumping"@en .
+  
+onlim:Karate
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Karate"@en .
+
+onlim:Karting
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Karting"@en .
+
+onlim:Kayaking
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Kayaking"@en .  
+  
+onlim:KayakingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WaterTrail ;
+  rdfs:label "KayakingTrail"@en .    
+  
+onlim:KiteFlying
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "KiteFlying"@en .    
+
+onlim:Kiting
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Kiting"@en .      
+
+onlim:LamaTrekking
+  rdfs:subClassOf onlim:Trekking ;
+  a rdfs:Class ;
+  rdfs:label "LamaTrekking"@en .
+  
+onlim:LanternOrTorchlightWalk
+  a rdfs:Class ;
+  rdfs:label "LanternOrTorchlightWalk"@en ;
+  rdfs:subClassOf onlim:Hiking .  
+  
+onlim:Lido
+  rdfs:subClassOf schema:PublicSwimmingPool ;
+  a rdfs:Class ;
+  rdfs:label "Lido"@en .  
+  
+onlim:LongDistanceCyclingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Biking ;
+  rdfs:label "LongDistanceCyclingTrail"@en .
+
+onlim:LongDistanceHikingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Hiking ;
+  rdfs:label "LongDistanceHikingTrail"@en .
+  
+onlim:LongDistanceSkiTouring
+  rdfs:subClassOf onlim:WinterTrail ;
+  a rdfs:Class ;
+  rdfs:label "LongDistanceSkiTouring"@en .  
+  
+onlim:LongeHours 
+  a rdfs:Class ;
+  rdfs:label "LongeHours"@en ;
+  rdfs:subClassOf onlim:HorseRiding .  
+  
+onlim:MagicCarpet
+  rdfs:subClassOf onlim:SkiLift ;
+  a rdfs:Class ;
+  rdfs:label "MagicCarpet"@en .  
+  
+onlim:Minigolf
+  rdfs:subClassOf schema:GolfCourse ;
+  a rdfs:Class ;
+  rdfs:label "Minigolf"@en .  
+  
+onlim:ModelSports
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "ModelSports"@en .   
+  
+onlim:MonocableGondolaLift
+  rdfs:subClassOf onlim:CableCar ;
+  a rdfs:Class ;
+  rdfs:label "MonocableGondolaLift"@en .
+
+onlim:MonoSkiing
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Skiing ;
+  rdfs:label "MonoSkiing"@en .  
+  
+onlim:MoonlightSkiTouring
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:SkiTouring ;
+  rdfs:label "MoonlightSkiTouring"@en .  
+
+onlim:MotorcycleTour
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Tour ;
+  rdfs:label "MotorcycleTour"@en . 
+
+onlim:MotorPoweredFlight
+  rdfs:subClassOf schema:Flight ;
+  a rdfs:Class ;
+  rdfs:label "MotorPoweredFlight"@en .  
+  
+onlim:MotorsportsFacility
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;  
+  rdfs:label "MotorsportsFacility"@en .  
+  
+onlim:MountainBikeTrail
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "MountainBikeTrail"@en .  
+
+onlim:MountainBikeTransalpTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Biking ;
+  rdfs:label "MountainBikeTransalpTrail"@en .
+  
+onlim:Mountaineering
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Trail ;
+  rdfs:label "Mountaineering"@en .  
+
+onlim:MountainHike
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Mountaineering ;
+  rdfs:label "MountainHike"@en .
+
+onlim:MountainHiking2000m
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Hiking ;
+  rdfs:label "MountainHiking2000m"@en .
+  
+onlim:NightSkiing
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Skiing ;
+  rdfs:label "NightSkiing"@en .
+
+onlim:NightSledding 
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Sledding ;
+  rdfs:label "NightSledding"@en .    
+  
+onlim:NordicWalkingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WalkingTrail ;
+  rdfs:label "NordicWalkingTrail"@en .
+    
+onlim:NostalgicTrip
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "NostalgicTrip"@en .  
+  
+onlim:OutdoorActivities
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "OutdoorActivities"@en .  
+  
+onlim:OutdoorCourts
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "OutdoorCourts"@en .  
+
+onlim:OutdoorPublicSwimmingPool
+  a rdfs:Class ;
+  rdfs:subClassOf schema:PublicSwimmingPool ;
+  rdfs:label "OutdoorPublicSwimmingPool"@en .
+  
+onlim:Paintball
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Paintball"@en .
+  
+onlim:Paragliding
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:AirSports ;
+  rdfs:label "Paragliding"@en .
+
+onlim:Parasailing
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:AirSports ;
+  rdfs:label "Parasailing"@en .  
+  
+onlim:PersonalTrainer
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "PersonalTrainer"@en .
+
+onlim:PilgrimTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Hiking ;
+  rdfs:label "PilgrimTrail"@en .
+
+onlim:Polo
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Polo"@en .
+  
+onlim:PonyRiding
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Riding ;
+  rdfs:label "PonyRiding"@en .  
+    
+onlim:RacingBikeCourse
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "RacingBikeCourse"@en .
+
+onlim:RacingTrack
+  rdfs:subClassOf onlim:FunPark ;
+  a rdfs:Class ;
+  rdfs:label "RacingTrack"@en .
+
+onlim:RackRailway
+  rdfs:subClassOf onlim:SkiLift ;
+  a rdfs:Class ;
+  rdfs:label "RackRailway"@en .
+  
+onlim:RaftBuilding
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "RaftBuilding"@en .
+
+onlim:Rafting
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Rafting"@en .
+  
+onlim:RaftingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WaterTrail ;
+  rdfs:label "RaftingTrail"@en .   
+
+onlim:RaftRiding
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "RaftRiding"@en .   
+
+onlim:RailwayTrackBikePath
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Biking ;
+  rdfs:label "RailwayTrackBikePath"@en .
+  
+onlim:Riding
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Riding"@en .
+  
+onlim:RidingArena
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Riding ;
+  rdfs:label "RidingArena"@en .
+
+onlim:RidingTournament
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "RidingTournament"@en .
+
+onlim:RiversideBikeTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:BikingTrail ;
+  rdfs:label "RiversideBikeTrail"@en .
+  
+onlim:RoadBikeTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Biking ;
+  rdfs:label "RoadBikeTrail"@en .
+  
+onlim:RopeCourse
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "RopeCourse"@en .
+  
+onlim:RopeTow
+  rdfs:subClassOf onlim:SkiLift ;
+  a rdfs:Class ;
+  rdfs:label "RopeTow"@en .  
+  
+onlim:Rowing
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Rowing"@en .
+
+onlim:RowingCourse
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "RowingCourse"@en .
+
+onlim:Running
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Running"@en .  
+  
+onlim:RunningTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Trail ;
+  rdfs:label "Runningtrail"@en, "RunningTrail"@en .
+  
+onlim:Sailing
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Sailing"@en .  
+  
+onlim:Shooting
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Shooting"@en .
+
+onlim:ShootingRange
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Shooting ;
+  rdfs:label "ShootingRange"@en .
+
+onlim:SightseeingFlight
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "SightseeingFlight"@en .
+  
+onlim:Skateboarding
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Skateboarding"@en .
+  
+onlim:SkatingTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Trail ;
+  rdfs:label "SkatingTrail"@en .    
+
+onlim:SkeetShooting
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Shooting ;
+  rdfs:label "SkeetShooting"@en .
+
+onlim:SkiCarving
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Skiing ;
+  rdfs:label "SkiCarving"@en .
+  
+onlim:SkiCircuit
+  rdfs:subClassOf onlim:WinterTrail ;
+  a rdfs:Class ;
+  rdfs:label "SkiCircuit"@en .
+  
+onlim:SkiDiving
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Jumping ;
+  rdfs:label "SkiDiving"@en .
+  
+onlim:Skifox
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Skifox"@en .
+
+onlim:Skiing
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Skiing"@en .
+  
+onlim:SkiLift
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "SkiLift"@en .    
+  
+onlim:SkiRoute
+  rdfs:subClassOf onlim:Slope ;
+  a rdfs:Class ;
+  rdfs:label "SkiRoute"@en .
+
+onlim:SkiSlope
+  rdfs:subClassOf onlim:Slope ;
+  a rdfs:Class ;
+  rdfs:label "SkiSlope"@en .
+   
+onlim:SkiTouring
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WinterTrail ; 
+  rdfs:label "Skitouring"@en, "SkiTouring"@en .   
+
+onlim:Sledding 
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Sledding"@en .
+  
+onlim:SleddingTrail 
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WinterTrail ;
+  rdfs:label "SleddingTrail"@en .
+
+onlim:Slope
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Slope"@en .    
+  
+onlim:Snakeboarding
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation;
+  rdfs:label "Snakeboarding"@en .      
+  
+onlim:Snowbiking
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Snowbiking"@en .  
+
+onlim:Snowblading
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Snowblading"@en .
+
+onlim:Snowboarding
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Snowboarding"@en .
+
+onlim:SnowcatRide
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "SnowcatRide"@en .
+
+onlim:Snowdeck
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+   rdfs:label "Snowdeck"@en .
+
+onlim:SnowGolf
+  a rdfs:Class ;
+  rdfs:subClassOf schema:GolfCourse ;
+  rdfs:label "SnowGolf"@en .    
+
+onlim:Snowmobiling
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Snowmobiling"@en .
+
+onlim:SnowPark
+  rdfs:subClassOf onlim:FunPark ;
+  a rdfs:Class ;
+  rdfs:label "SnowPark"@en .
+  
+onlim:Snowrafting
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Snowrafting"@en .
+
+onlim:Snowriding
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Snowriding"@en .
+  
+onlim:Snowscootering
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Snowscootering"@en .
+
+onlim:SnowshoeHiking
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:WinterTrail ;
+  rdfs:label "SnowshoeHiking"@en .
+  
+onlim:SnowSoccer
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Soccer ;
+  rdfs:label "SnowSoccer"@en .  
+
+onlim:SnowTubing
+  rdfs:subClassOf onlim:FunPark ;
+  a rdfs:Class ;
+  rdfs:label "SnowTubing"@en . 
+  
+onlim:Soccer
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Soccer"@en .  
+  
+onlim:SportsCenter
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "SportsCenter"@en .
+  
+onlim:Squash
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Squash"@en .
+
+onlim:StandUpPaddling
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "StandUpPaddling"@en .
+  
+onlim:Streetball
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Basketball ;
+  rdfs:label "Streetball"@en .
+  
+onlim:SummerTobogganRun
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Tobogganing ;
+  rdfs:label "SummerTobogganRun"@en .
+
+onlim:Surfing
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Surfing"@en .
+
+onlim:SurvivalTrip
+  a rdfs:Class ;
+  rdfs:label "SurvivalTrip"@en ;
+  rdfs:subClassOf schema:Trip .
+    
+onlim:Swimming
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Swimming"@en .  
+  
+onlim:TableTennis
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "TableTennis"@en .
+
+onlim:Taekwondo
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Taekwondo"@en .
+
+onlim:TandemFlying
+  rdfs:subClassOf onlim:AirSports ;
+  a rdfs:Class ;
+  rdfs:label "TandemFlying"@en .
+
+onlim:TandemJumping
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Jumping ;
+  rdfs:label "TandemJumping"@en .
+
+onlim:TBar
+  rdfs:subClassOf onlim:SkiLift ;
+  a rdfs:Class ;
+  rdfs:label "TBar"@en .
+
+
+  
+onlim:TennisTournament
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "TennisTournament"@en .  
+  
+onlim:ThemedRoute
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "ThemedRoute"@en .  
+  
+onlim:ThematicTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Trail ;
+  rdfs:label "ThematicTrail"@en .
+
+onlim:Tobogganing
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Tobogganing"@en .
+  
+onlim:Tour
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Tour"@en .
+   
+  
+onlim:TouristTrail
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:Trail ;
+  rdfs:label "TouristTrail"@en .   
+  
+onlim:Trail
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Trail"@en .   
+  
+onlim:TrailRunning
+  a rdfs:Class ;
+  rdfs:subClassOf onlim:RunningTrail ;
+  rdfs:label "TrailRunning"@en .  
+  
+onlim:Trampoline
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Trampoline"@en .    
+  
+onlim:TricableGondolaLift
+  rdfs:subClassOf onlim:CableCar ;
+  a rdfs:Class ;
+  rdfs:label "TricableGondolaLift"@en .   
+  
+onlim:Trekking
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  rdfs:label "Trekking"@en . 
+  
+schema:Trip 
+  a rdfs:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation, schema:Intangible ;
+  rdfs:label "Trip" ;
+  rdfs:comment "A trip or journey. An itinerary of visits to one or more places." ;
+  dc:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism> .
+ 
+onlim:UrbanWalk
+  rdfs:subClassOf onlim:CityTrail ;
+  a rdfs:Class ;
+  rdfs:label "UrbanWalk"@en .  
+  
+onlim:ViaFerrataTrail
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  a rdfs:Class ;
+  rdfs:label "ViaFerrataTrail"@en .  
+  
+onlim:Volleyball
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  a rdfs:Class ;
+  rdfs:label "Volleyball"@en .
+
+onlim:Wakeboarding
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  a rdfs:Class ;
+  rdfs:label "Wakeboarding"@en .
+
+onlim:WalkingTrail
+  a rdfs:Class ;
+  rdfs:label "Walkingtrail"@en ;
+  rdfs:subClassOf onlim:Trail .  
+  
+onlim:WaterSkiing
+  a rdfs:Class ;
+  rdfs:label "WaterSkiing"@en ;
+  rdfs:subClassOf schema:SportsActivityLocation .
+
+onlim:WaterSportsFacility
+  a rdfs:Class ;
+  rdfs:label "WaterSportsFacility"@en ;
+  rdfs:subClassOf schema:SportsActivityLocation .
+  
+onlim:WaterTrail
+  rdfs:subClassOf onlim:Trail ;
+  a rdfs:Class ;
+  rdfs:label "WaterTrail"@en .    
+  
+onlim:WesternRiding
+  rdfs:subClassOf onlim:HorseRiding ;
+  a rdfs:Class ;
+  rdfs:label "WesternRiding"@en .  
+  
+onlim:WineRoute
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  a rdfs:Class ;
+  rdfs:label "WineRoute"@en .  
+  
+onlim:WinterHikingTrail
+  rdfs:subClassOf onlim:WinterTrail ;
+  a rdfs:Class ;
+  rdfs:label "WinterHikingTrail"@en .
+  
+onlim:WinterTrail
+  rdfs:label "Wintertrail"@en, "WinterTrail"@en ;
+  rdfs:subClassOf onlim:Trail ;
+  a rdfs:Class .  
+  
+onlim:Yoga
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  a rdfs:Class ;
+  rdfs:label "Yoga"@en .
+  
+onlim:Zipflbob
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  a rdfs:Class ;
+  rdfs:label "Zipflbob"@en .
+
+onlim:Zorbing
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  a rdfs:Class ;
+  rdfs:label "Zorbing"@en .
+ 

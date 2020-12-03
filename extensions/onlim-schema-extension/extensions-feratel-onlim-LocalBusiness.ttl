@@ -1,0 +1,944 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix onlim: <http://onlim.com/schema/> .
+
+
+##### LocalBusiness
+onlim:AboMenu
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "AboMenu"@en .  
+
+onlim:AdultEducationCenter
+  a rdfs:Class ;
+  rdfs:label "AdultEducationCenter"@en ;
+  rdfs:subClassOf schema:EducationalOrganization .
+  
+onlim:AlpineExcursion
+  rdfs:subClassOf onlim:Excursion ;
+  a rdfs:Class ;
+  rdfs:label "AlpineExcursion"@en .
+  
+onlim:ArrivalDepartureStructure
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "ArrivalDepartureStructure"@en .
+  
+onlim:Association
+  a rdfs:Class ;
+  rdfs:label "Association"@en ;
+  rdfs:subClassOf schema:LocalBusiness .
+  
+onlim:AutomatedTeller
+  rdfs:subClassOf schema:BankOrCreditUnion, schema:FinancialService ;
+  rdfs:label "AutomatedTeller" ;
+  rdfs:comment "ATM/cash machine." ;
+  a rdfs:Class .  
+
+onlim:AvalancheCourseProvider
+  a rdfs:Class ;
+  rdfs:label "AvalancheCourseProvider"@en ;
+  rdfs:subClassOf schema:LocalBusiness .  
+  
+onlim:BabySitting
+  a rdfs:Class ;
+  rdfs:label "BabySitting"@en ;
+  rdfs:subClassOf schema:ChildCare . 
+  
+onlim:BikeGuide
+  rdfs:subClassOf onlim:Guide ;
+  a rdfs:Class ;
+  rdfs:label "BikeGuide"@en .  
+  
+onlim:BikeRepair
+  a rdfs:Class ;
+  rdfs:label "BikeRepair"@en ;
+  rdfs:subClassOf schema:LocalBusiness .  
+  
+onlim:BikeTransport
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "BikeTransport"@en .  
+  
+onlim:ChildrenAnimation
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "ChildrenAnimation"@en  .   
+  
+onlim:ChildrenSkiCourseProvider
+  a rdfs:Class ;
+  rdfs:label "ChildrenSkiCourseProvider"@en ;
+  rdfs:subClassOf onlim:SkiCourseProvider .  
+  
+onlim:Congress
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Congress"@en .  
+  
+onlim:Crafting
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Crafting"@en .  
+  
+onlim:CulturalCenter
+  a rdfs:Class ;
+  rdfs:label "CulturalCenter"@en ;
+  rdfs:subClassOf onlim:EventsCenter .  
+  
+onlim:CulturalFacility
+  rdfs:subClassOf schema:EntertainmentBusiness, schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "CulturalFacility"@en .  
+  
+onlim:DirectMarketer
+  a rdfs:Class ;
+  rdfs:label "DirectMarketer"@en ;
+  rdfs:subClassOf schema:LocalBusiness .  
+  
+onlim:EBikeBatteryChangingStation
+  a rdfs:Class ;
+  rdfs:label "EBikeBatteryChangingStation"@en ;
+  rdfs:subClassOf schema:LocalBusiness .
+  
+onlim:EBikeStation
+  a rdfs:Class ;
+  rdfs:label "EBikeStation"@en ;
+  rdfs:subClassOf schema:LocalBusiness .  
+  
+onlim:Electromobility
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Electromobility"@en .  
+  
+onlim:EventsCenter
+  rdfs:label "EventsCenter"@en ;
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class .  
+    
+onlim:EventOrganizer
+  a rdfs:Class ;
+  rdfs:label "EventOrganizer"@en ;
+  rdfs:subClassOf schema:LocalBusiness .  
+  
+onlim:Faculty
+  a rdfs:Class ;
+  schema:name "Fakultät"@de, "Faculty"@en ;
+  rdfs:subClassOf schema:CollegeOrUniversity .  
+  
+onlim:FamilyDestination
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "FamilyDestination"@en .    
+
+onlim:FishDealer
+  a rdfs:Class ;
+  rdfs:label "FishDealer"@en ;
+  rdfs:subClassOf schema:LocalBusiness .      
+
+onlim:Guide
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Guide"@en .    
+  
+onlim:GuidedExcursion
+  rdfs:subClassOf onlim:Excursion ;
+  a rdfs:Class ;
+  rdfs:label "GuidedExcursion"@en .   
+
+onlim:GuestHorseboxes
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "GuestHorseboxes"@en .  
+    
+onlim:HearingCare
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "HearingCare"@en .  
+  
+onlim:HelicopterService
+  a rdfs:Class ;
+  rdfs:label "HelicopterService"@en ;
+  rdfs:subClassOf schema:LocalBusiness .    
+  
+onlim:HouseholdItemsProvider
+  a rdfs:Class ;
+  rdfs:label "HouseholdItemsProvider"@en ;
+  rdfs:subClassOf schema:LocalBusiness .  
+  
+onlim:HouseholdObjects
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "HouseholdObjects"@en .  
+  
+onlim:LostAndFoundOffice
+  rdfs:subClassOf schema:GovernmentOffice ;
+  a rdfs:Class ;
+  rdfs:label "LostAndFoundOffice"@en .    
+  
+onlim:Lottery
+  a rdfs:Class ;
+  rdfs:label "Lottery"@en ;
+  rdfs:subClassOf schema:LocalBusiness .  
+  
+onlim:Marketing
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Marketing"@en .  
+  
+onlim:Mill
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Mill"@en .  
+  
+onlim:Mine
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Mine"@en .  
+  
+onlim:MountainBikeGuide
+  rdfs:subClassOf onlim:Guide ;
+  a rdfs:Class ;
+  rdfs:label "MountainBikeGuide"@en .
+  
+onlim:MountainGuide
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "MountainGuide"@en .   
+  
+onlim:NostalgicTrain
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "NostalgicTrain"@en .  
+  
+onlim:ParishOffice
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "ParishOffice"@en .  
+  
+onlim:PaintingBusiness
+  a rdfs:Class ;
+  rdfs:label "PaintingBusiness"@en ;
+  rdfs:subClassOf schema:LocalBusiness .
+  
+onlim:PettingAnimals
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "PettingAnimals"@en .  
+  
+onlim:PhotoStudio
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "PhotoStudio"@en .  
+  
+onlim:RegionalProductsProvider
+  a rdfs:Class ;
+  rdfs:label "RegionalProductsProvider"@en ;
+  rdfs:subClassOf schema:LocalBusiness .  
+  
+onlim:RentalBusiness
+  a rdfs:Class ;
+  rdfs:label "Rentalbusiness"@en ;
+  rdfs:subClassOf schema:LocalBusiness .    
+
+onlim:Seminar
+  rdfs:subClassOf schema:EducationEvent, schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Seminar"@en .
+
+onlim:Skatepark
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Skatepark"@en .
+  
+onlim:SkiCourseProvider
+  a rdfs:Class ;
+  rdfs:label "Skicourseprovider"@en ;
+  rdfs:subClassOf schema:LocalBusiness .  
+  
+onlim:SkiTourProvider
+  rdfs:subClassOf onlim:TourProvider ;
+  a rdfs:Class ;
+  rdfs:label "SkiTourProvider"@en .  
+  
+onlim:SnowMakingFacility
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "SnowMakingFacility"@en .
+  
+onlim:Software
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Software"@en .
+
+onlim:Souvenir
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Souvenir"@en .  
+  
+onlim:Supermarket
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Supermarket"@en .
+  
+onlim:TownHall
+  rdfs:subClassOf schema:GovernmentOffice ;
+  a rdfs:Class ;
+  rdfs:label "TownHall"@en .   
+  
+onlim:TicketSeller
+  a rdfs:Class ;
+  rdfs:label "TicketSeller"@en ;
+  rdfs:subClassOf schema:LocalBusiness .  
+
+onlim:TollRoad
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "TollRoad"@en .
+  
+onlim:TourGuide
+  rdfs:subClassOf onlim:Guide ;
+  a rdfs:Class ;
+  rdfs:label "TourGuide"@en .  
+
+onlim:TourProvider
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class ;
+  rdfs:label "TourProvider"@en .  
+
+onlim:TraditionalLocalBusiness
+  a rdfs:Class ;
+  rdfs:label "TraditionalLocalBusiness"@en ;
+  rdfs:subClassOf schema:LocalBusiness .
+  
+onlim:TrafficService
+  a rdfs:Class ;
+  rdfs:label "TrafficService"@en ;
+  rdfs:subClassOf schema:LocalBusiness .    
+  
+
+onlim:TransportCompany
+  rdfs:label "Transportcompany"@en, "TransportCompany"@en ;
+  rdfs:subClassOf schema:LocalBusiness ;
+  a rdfs:Class .  
+  
+onlim:WoodProductsProvider
+  a rdfs:Class ;
+  rdfs:label "WoodProductsProvider"@en ;
+  rdfs:subClassOf schema:LocalBusiness .
+  
+  
+##### HealthAndBeautyBusiness
+
+onlim:AntiAging
+  a rdfs:Class ;
+  rdfs:label "AntiAging"@en ;
+  rdfs:subClassOf schema:HealthAndBeautyBusiness .
+  
+onlim:KneippFacility
+  rdfs:subClassOf schema:HealthAndBeautyBusiness ;
+  a rdfs:Class ;
+  rdfs:label "KneippFacility"@en .  
+  
+onlim:MassageSalon
+  rdfs:subClassOf schema:HealthAndBeautyBusiness ;
+  a rdfs:Class ;
+  rdfs:label "MassageSalon"@en .
+
+onlim:NutritionCounseling
+  rdfs:subClassOf schema:HealthAndBeautyBusiness ;
+  a rdfs:Class ;
+  rdfs:label "NutritionCounseling"@en .
+  
+onlim:Perfumery
+  a rdfs:Class ;
+  rdfs:label "Perfumery"@en ;
+  rdfs:subClassOf schema:HealthAndBeautyBusiness .
+  
+onlim:Pharmay
+  a rdfs:Class ;
+  rdfs:label "Pharmay"@en ;
+  rdfs:subClassOf schema:HairSalon .    
+  
+onlim:Physiotherapie
+  rdfs:subClassOf schema:HealthAndBeautyBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Physiotherapie"@en .  
+  
+onlim:RecreationHome
+  a rdfs:Class ;
+  rdfs:label "RecreationHome"@en ;
+  rdfs:subClassOf schema:HealthAndBeautyBusiness .    
+  
+onlim:Sauna
+  rdfs:subClassOf schema:HealthAndBeautyBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Sauna"@en .  
+
+onlim:Solarium
+  rdfs:subClassOf schema:HealthAndBeautyBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Solarium"@en .  
+  
+onlim:SteamBath
+  rdfs:subClassOf schema:HealthAndBeautyBusiness ;
+  a rdfs:Class ;
+  rdfs:label "SteamBath"@en .
+    
+onlim:ThermalBath
+  rdfs:subClassOf schema:HealthAndBeautyBusiness ;
+  a rdfs:Class ;
+  rdfs:label "ThermalBath"@en .
+
+onlim:WellnessFacility
+  a rdfs:Class ;
+  rdfs:label "WellnessFacility"@en ;
+  rdfs:subClassOf schema:HealthAndBeautyBusiness .  
+  
+###### Store
+onlim:AntiquitiesStore
+  a rdfs:Class ;
+  rdfs:label "AntiquitiesStore"@en ;
+  rdfs:subClassOf schema:Store .  
+  
+onlim:ArtsWorkshop
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "ArtsWorkshop"@en . 
+
+onlim:BeachKiosk
+  rdfs:subClassOf onlim:Kiosk ;
+  a rdfs:Class ;
+  rdfs:label "BeachKiosk"@en .
+  
+onlim:BeerRetailer
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "BeerRetailer"@en .
+  
+onlim:BikeRental
+  rdfs:subClassOf onlim:SportsEquipmentRental, schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "BikeRental"@en .  
+
+onlim:BioShop
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "BioShop"@en .
+  
+onlim:Boutique
+  a rdfs:Class ;
+  rdfs:label "Boutique"@en ;
+  rdfs:subClassOf schema:Store .
+ 
+onlim:Butcher
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "Butcher"@en .
+  
+onlim:CandyStore
+  a rdfs:Class ;
+  rdfs:label "CandyStore"@en ;
+  rdfs:subClassOf schema:Store .  
+  
+onlim:CampingEquipment
+  a rdfs:Class ;
+  rdfs:label "CampingEquipment"@en ;
+  rdfs:subClassOf onlim:SportsEquipmentRental .  
+  
+onlim:CrossCountrySkiRental
+  rdfs:subClassOf onlim:SkiRental ;
+  a rdfs:Class ;
+  rdfs:label "CrossCountrySkiRental"@en .  
+  
+onlim:DrugStore
+  a rdfs:Class ;
+  rdfs:label "DrugStore"@en ;
+  rdfs:subClassOf schema:Store .   
+
+onlim:DutyFree
+  a rdfs:Class ;
+  rdfs:label "DutyFree"@en ;
+  rdfs:subClassOf schema:Store .  
+  
+onlim:EBikeRental
+  rdfs:subClassOf onlim:BikeRental ;
+  a rdfs:Class ;
+  rdfs:label "EBikeRental"@en .  
+  
+onlim:FarmProducts
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "FarmProducts"@en .
+
+onlim:FarmShop
+  a rdfs:Class ;
+  rdfs:label "FarmShop"@en ;
+  rdfs:subClassOf schema:Store .
+
+onlim:FishingEquipmentStore
+  a rdfs:Class ;
+  rdfs:label "FishingEquipmentStore"@en ;
+  rdfs:subClassOf schema:Store .
+
+onlim:FruitAndVegetableStore
+  a rdfs:Class ;
+  rdfs:label "FruitAndVegetableStore"@en ;
+  rdfs:subClassOf schema:Store .
+  
+onlim:FashionStore
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "FashionStore"@en .  
+  
+onlim:GiftShop
+  a rdfs:Class ;
+  rdfs:label "GiftShop"@en ;
+  rdfs:subClassOf schema:Store .
+
+onlim:GlassAndCeramicware
+  a rdfs:Class ;
+  rdfs:label "GlassAndCeramicware"@en ;
+  rdfs:subClassOf schema:Store .
+
+onlim:GlasswareCeramicWare
+  a rdfs:Class ;
+  rdfs:label "GlasswareCeramicWare"@en ;
+  rdfs:subClassOf schema:Store .
+
+onlim:GolfTournament
+  rdfs:subClassOf schema:GolfCourse ;
+  a rdfs:Class ;
+  rdfs:label "GolfTournament"@en .
+  
+onlim:GroceryWholesaler
+  a rdfs:Class ;
+  rdfs:label "GroceryWholesaler"@en ;
+  rdfs:subClassOf schema:Store .
+  
+onlim:Haberdashery
+  a rdfs:Class ;
+  rdfs:label "Haberdashery"@en ;
+  rdfs:subClassOf schema:Store .  
+  
+onlim:Ironmongery
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "Ironmongery"@en .  
+  
+onlim:Kiosk
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "Kiosk"@en .
+
+onlim:LeatherStore
+  a rdfs:Class ;
+  rdfs:label "LeatherStore"@en ;
+  rdfs:subClassOf schema:Store .  
+
+onlim:MedicalSupplyStore
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "MedicalSupplyStore"@en .
+  
+onlim:Minimarket
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "Minimarket"@en .
+  
+onlim:PlumbingStore
+  a rdfs:Class ;
+  rdfs:label "PlumbingStore"@en ;
+  rdfs:subClassOf schema:Store .    
+  
+onlim:Sculptor
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "Sculptor"@en .    
+   
+onlim:SkiChildCare
+  rdfs:subClassOf schema:ChildCare ;
+  a rdfs:Class ;
+  rdfs:label "SkiChildCare"@en .
+
+onlim:SkiDepot
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "SkiDepot"@en .
+
+onlim:SkiRental
+  rdfs:label "Skirental"@en, "SkiRental"@en ;
+  rdfs:subClassOf onlim:SportsEquipmentRental ;
+  a rdfs:Class .    
+  
+onlim:SledgeRental
+  rdfs:subClassOf onlim:SportsEquipmentRental ;
+  a rdfs:Class ;
+  rdfs:label "SledgeRental"@en .
+   
+onlim:SportsEquipmentRental
+  rdfs:label "SportsEquipmentRental"@en ;
+  rdfs:subClassOf onlim:RentalBusiness, schema:Store ;
+  a rdfs:Class .
+
+onlim:Stationary
+  a rdfs:Class ;
+  rdfs:label "Stationary"@en ;
+  rdfs:subClassOf schema:Store .  
+
+onlim:StrollerRental
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "StrollerRental"@en .
+
+onlim:SouvenirShop
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "SouvenirShop"@en .
+
+onlim:TobacooShop
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "TobacooShop"@en .
+  
+onlim:Tailor
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "Tailor"@en .
+  
+onlim:TraditionalClothingStore
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "TraditionalClothingStore"@en .
+
+onlim:WineShop
+  rdfs:subClassOf schema:LiquorStore ;
+  a rdfs:Class ;
+  rdfs:label "WineShop"@en .  
+  
+onlim:WritingMaterials
+  rdfs:subClassOf schema:Store ;
+  a rdfs:Class ;
+  rdfs:label "WritingMaterials"@en .  
+  
+##### TouristInformationCenter 
+
+onlim:AvalancheInfo
+  rdfs:subClassOf schema:TouristInformationCenter ;
+  a rdfs:Class ;
+  rdfs:label "AvalancheInfo"@en . 
+  
+##### MedicalOrganization  
+onlim:AirAmbulance
+  rdfs:subClassOf schema:MedicalOrganization ;
+  a rdfs:Class ;
+  rdfs:label "AirAmbulance"@en .  
+  
+onlim:DayClinic
+  a rdfs:Class ;
+  rdfs:label "DayClinic"@en ;
+  rdfs:subClassOf onlim:MedicalClinic .
+ 
+onlim:GeneralPractitioner
+  a rdfs:Class ;
+  rdfs:label "GeneralPractitioner"@en ;
+  rdfs:subClassOf schema:Physician . 
+ 
+onlim:HolidayDialysis
+  a rdfs:Class ;
+  rdfs:label "HolidayDialysis"@en ;
+  rdfs:subClassOf schema:MedicalOrganization .
+
+onlim:HearingAidAcoustician
+  a rdfs:Class ;
+  rdfs:label "HearingAidAcoustician"@en ;
+  rdfs:subClassOf schema:MedicalOrganization .
+
+onlim:Surgery
+  a rdfs:Class ;  
+  rdfs:label "Surgery"@en ;
+  rdfs:subClassOf schema:MedicalOrganization . 
+  
+onlim:Pediatrician
+  a rdfs:Class ;
+  rdfs:label "Pediatrician"@en ;
+  rdfs:subClassOf schema:Physician .  
+  
+##### AutomotiveBusiness
+
+onlim:ChargingStation
+  rdfs:subClassOf schema:AutomotiveBusiness ;
+  a rdfs:Class ;
+  rdfs:label "ChargingStation"@en .  
+  
+onlim:BoatRental
+  a rdfs:Class ;
+  rdfs:label "BoatRental"@en ;
+  rdfs:subClassOf schema:AutoRental .  
+  
+onlim:EBikeChargingStation
+  rdfs:subClassOf onlim:ChargingStation ;
+  a rdfs:Class ;
+  rdfs:label "EBikeChargingStation"@en .
+
+onlim:ECarChargingStation
+  rdfs:subClassOf onlim:ChargingStation ;
+  a rdfs:Class ;
+  rdfs:label "ECarChargingStation"@en .  
+  
+onlim:Towing
+  a rdfs:Class ;
+  rdfs:label "Towing"@en ;
+  rdfs:subClassOf schema:AutomotiveBusiness .  
+  
+##### EntertainmentBusiness
+
+onlim:Cabaret
+  a rdfs:Class ;
+  rdfs:label "Cabaret"@en ;
+  rdfs:subClassOf schema:EntertainmentBusiness .  
+
+
+onlim:DancingPlace
+  a rdfs:Class ;
+  rdfs:label "DancingPlace"@en ;
+  rdfs:subClassOf schema:EntertainmentBusiness .
+  
+onlim:Discothek
+  a rdfs:Class ;
+  rdfs:label "Discothek"@en ;
+  rdfs:subClassOf schema:EntertainmentBusiness .  
+
+onlim:Opera
+  a rdfs:Class ;
+  rdfs:label "Opera"@en ;
+  rdfs:subClassOf schema:EntertainmentBusiness .
+  
+onlim:Theater
+  rdfs:subClassOf schema:EntertainmentBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Theater"@en .  
+  
+#### Schools
+onlim:AlpineSchool 
+  a rdfs:Class ;
+  rdfs:label "AlpineSchool"@en ;
+  rdfs:subClassOf onlim:SportSchool .
+ 
+onlim:ClimbingSchool
+  a rdfs:Class ;
+  rdfs:label "ClimbingSchool"@en ;
+  rdfs:subClassOf onlim:SportSchool .
+
+onlim:CrossCountrySkiSchool
+  a rdfs:Class ;
+  rdfs:label "CrossCountrySkiSchool"@en ;
+  rdfs:subClassOf onlim:SkiSchool .
+
+onlim:DivingSchool
+  a rdfs:Class ;
+  rdfs:label "DivingSchool"@en ;
+  rdfs:subClassOf onlim:SportSchool .
+
+onlim:DrivingSchool
+  a rdfs:Class ;
+  rdfs:label "DrivingSchool"@en ;
+  rdfs:subClassOf schema:School .
+
+onlim:FlightSchool
+  rdfs:subClassOf onlim:SportSchool ;
+  a rdfs:Class ;
+  rdfs:label "FlightSchool"@en .
+  
+onlim:GolfSchool 
+  a rdfs:Class ;
+  rdfs:label "GolfSchool"@en ;
+  rdfs:subClassOf onlim:SportSchool .  
+  
+onlim:MountainSchool
+  a rdfs:Class ;
+  rdfs:label "MountainSchool"@en ;
+  rdfs:subClassOf onlim:SportSchool . 
+
+onlim:PrivateSchool
+  a rdfs:Class ;
+  rdfs:label "PrivateSchool"@en ;
+  rdfs:subClassOf schema:School .
+  
+onlim:RidingSchool 
+  a rdfs:Class ;
+  rdfs:label "RidingSchool"@en ; 
+  rdfs:subClassOf onlim:SportSchool .   
+
+onlim:SkiSchool
+  rdfs:subClassOf onlim:SportSchool ;
+  a rdfs:Class ;
+  rdfs:label "SkiSchool"@en .
+  
+onlim:SnowboardSchool
+  rdfs:subClassOf onlim:SportSchool ;
+  a rdfs:Class ;
+  rdfs:label "SnowboardSchool"@en .  
+
+onlim:SportSchool
+  a rdfs:Class ;
+  rdfs:label "Sportschool"@en ;
+  rdfs:subClassOf schema:School .
+  
+onlim:SwimmingSchool
+  rdfs:subClassOf onlim:SportSchool ;
+  a rdfs:Class ;
+  rdfs:label "SwimmingSchool"@en .  
+  
+onlim:TechnicalSchool
+  a rdfs:Class ;
+  rdfs:label "TechnicalSchool"@en ;
+  rdfs:subClassOf schema:School .   
+  
+onlim:TennisSchool 
+  a rdfs:Class ;
+  rdfs:label "TennisSchool"@en ;
+  rdfs:subClassOf onlim:SportSchool .  
+
+onlim:VocationalSchool
+  a rdfs:Class ;
+  rdfs:label "FlightSchool"@en ;
+  rdfs:subClassOf schema:School .
+    
+
+##### TransportCompany
+
+onlim:AirTrafic
+  a rdfs:Class ;
+  rdfs:label "AirTrafic"@en ;
+  rdfs:subClassOf onlim:TransportCompany .  
+  
+onlim:BusCompany
+  rdfs:label "Buscompany"@en, "BusCompany"@en ;
+  rdfs:subClassOf onlim:TransportCompany ;
+  a rdfs:Class .  
+  
+onlim:CableRailway
+  rdfs:subClassOf onlim:TransportCompany ;
+  a rdfs:Class ;
+  rdfs:label "CableRailway"@en .    
+
+onlim:FerryTraffic
+  a rdfs:Class ;
+  rdfs:label "Ferrytraffic"@en ;
+  rdfs:subClassOf onlim:TransportCompany .
+  
+onlim:InternationalFerryTraffic
+  a rdfs:Class ;
+  rdfs:label "InternationalFerryTraffic"@en ;
+  rdfs:subClassOf onlim:FerryTraffic .  
+  
+onlim:NationalFerryTraffic
+  a rdfs:Class ;
+  rdfs:label "NationalFerryTraffic"@en ;
+  rdfs:subClassOf onlim:FerryTraffic .  
+
+onlim:OnSiteMobility
+  rdfs:subClassOf onlim:TransportCompany ;
+  a rdfs:Class ;
+  rdfs:label "OnSiteMobility"@en .   
+
+onlim:ShipCompany
+  a rdfs:Class ;
+  rdfs:label "ShipCompany"@en ;
+  rdfs:subClassOf onlim:TransportCompany .
+
+onlim:Skibus
+  rdfs:subClassOf onlim:BusCompany ;
+  a rdfs:Class ;
+  rdfs:label "Skibus"@en .
+    
+onlim:TaxiCompany
+  rdfs:subClassOf onlim:TransportCompany ;
+  a rdfs:Class ;
+  rdfs:label "TaxiCompany"@en .    
+  
+onlim:TrainCompany
+  rdfs:subClassOf onlim:TransportCompany ;
+  a rdfs:Class ;
+  rdfs:label "TrainCompany"@en .
+
+onlim:TramCompany
+  a rdfs:Class ;
+  rdfs:label "TramCompany"@en ;
+  rdfs:subClassOf onlim:TransportCompany .
+  
+onlim:WaterTaxi
+  a rdfs:Class ;
+  rdfs:label "WaterTaxi"@en ;
+  rdfs:subClassOf onlim:TaxiCompany .  
+
+
+### Courses 
+onlim:AvalancheCourse
+  rdfs:subClassOf schema:Course ;
+  a rdfs:Class ;
+  rdfs:label "AvalancheCourse"@en .
+
+onlim:DegreeCourse
+  a rdfs:Class ;
+  schema:name "Studiengang"@de, "DegreeCourse"@en ;
+  rdfs:subClassOf schema:Course .
+  
+onlim:ChildrenSkiCourse
+  rdfs:subClassOf onlim:SkiCourse ;
+  a rdfs:Class ;
+  rdfs:label "ChildrenSkiCourse"@en .  
+
+onlim:SkiCourse
+  rdfs:subClassOf schema:Course ;
+  a rdfs:Class ;
+  rdfs:label "SkiCourse"@en .  
+  
+###Service
+
+onlim:ServiceForPeopleWithDisabilities
+  a rdfs:Class ;
+  rdfs:label "Serviceforpeoplewithdisabilities"@en ;
+  rdfs:subClassOf schema:GovernmentService .
+  
+onlim:WheelchairAccess
+  a rdfs:Class ;
+  rdfs:label "WheelchairAccess"@en ;
+  rdfs:subClassOf onlim:ServiceForPeopleWithDisabilities .
+
+schema:FoodService
+  rdfs:subClassOf schema:LocalBusiness, schema:Service ;
+  rdfs:comment "A food service, like breakfast, lunch, or dinner." ;
+  rdfs:label "FoodService" ;
+  a rdfs:Class ;
+  dc:source <https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology> .
+
+onlim:Catering
+  rdfs:subClassOf onlim:FoodService ;
+  a rdfs:Class ;
+  rdfs:label "Catering"@en .  
+  
+onlim:MountainRescue
+  a rdfs:Class ;
+  rdfs:label "MountainRescue"@en ;
+  rdfs:subClassOf schema:EmergencyService .  
+  
+onlim:WaterRescue
+  a rdfs:Class ;
+  rdfs:label "WaterRescue"@en ;
+  rdfs:subClassOf schema:EmergencyService .    
+
+onlim:LockService
+  a rdfs:Class ;
+  rdfs:label "LockService"@en ;
+  rdfs:subClassOf schema:EmergencyService .   

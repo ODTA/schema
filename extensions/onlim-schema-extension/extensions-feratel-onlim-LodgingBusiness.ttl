@@ -1,0 +1,199 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix onlim: <http://onlim.com/schema/> .
+
+onlim:ApartmentHotel
+  a rdfs:Class ;
+  rdfs:label "ApartmentHotel"@en ;
+  rdfs:subClassOf schema:Hotel .
+
+onlim:BoardingHouse
+  a rdfs:Class ;
+  rdfs:label "BoardingHouse"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+  
+onlim:CountryHome
+  a rdfs:Class ;
+  rdfs:label "CountryHome"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .  
+  
+onlim:EquestrianFarm 
+  a rdfs:Class ;
+  rdfs:label "EquestrianFarm"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .    
+  
+onlim:Farm
+  a rdfs:Class ;
+  rdfs:label "Farm"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+
+onlim:FarmLodging
+  a rdfs:Class ;
+  rdfs:label "FarmLodging"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .  
+  
+onlim:GroupAccommodation
+  a rdfs:Class ;
+  rdfs:label "GroupAccommodation"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+
+onlim:Guesthouse
+  a rdfs:Class ;
+  rdfs:label "Guesthouse"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .  
+  
+onlim:GuestHouseLodging
+  a rdfs:Class ;
+  rdfs:label "GuestHouseLodging"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+
+onlim:HayLodging
+  a rdfs:Class ;
+  rdfs:label "HayLodging"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+  
+onlim:HolidayApartmentLodging
+  a rdfs:Class ;
+  rdfs:label "HolidayApartmentLodging"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+
+onlim:HolidayCamp
+  a rdfs:Class ;
+  rdfs:label "HolidayCamp"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .  
+  
+onlim:HolidayFarm
+  a rdfs:Class ;
+  rdfs:label "HolidayFarm"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+
+onlim:HolidayHome
+  rdfs:subClassOf schema:LodgingBusiness ;
+  a rdfs:Class ;
+  rdfs:label "HolidayHome"@en .
+
+onlim:HolidayParkLodging
+  a rdfs:Class ;
+  rdfs:label "HolidayParkLodging"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+  
+onlim:HorseRanchLodging
+  a rdfs:Class ;
+  rdfs:label "HorseRanchLodging"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .   
+  
+ onlim:HotelGarni
+  a rdfs:Class ;
+  rdfs:label "HotelGarni"@en ;
+  rdfs:subClassOf schema:Hotel . 
+  
+onlim:Hut
+  rdfs:subClassOf schema:FoodEstablishment, schema:LodgingBusiness ;
+  a rdfs:Class ;
+  rdfs:label "Hut"@en .
+    
+onlim:IglooLodging
+  a rdfs:Class ;
+  rdfs:label "IglooLodging"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .  
+  
+onlim:IglooVillage 
+  a rdfs:Class ;
+  rdfs:label "IglooVillage"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .  
+  
+onlim:Inn
+  a rdfs:Class ;
+  rdfs:label "Inn"@en ;
+  rdfs:subClassOf schema:FoodEstablishment, schema:LodgingBusiness .  
+  
+onlim:MountainHut
+  rdfs:subClassOf onlim:Hut ;
+  a rdfs:Class ;
+  rdfs:label "MountainHut"@en .
+  
+onlim:MountainInn
+  a rdfs:Class ;
+  rdfs:label "MountainInn"@en ;
+  rdfs:subClassOf onlim:Inn .  
+  
+onlim:Pension
+  a rdfs:Class ;
+  rdfs:label "Pension"@en ;
+  rdfs:subClassOf schema:BedAndBreakfast .    
+  
+onlim:PrivateRoom 
+  a rdfs:Class ;
+  rdfs:label "PrivateRoom "@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+  
+onlim:ResidenceLodging
+  a rdfs:Class ;
+  rdfs:label "ResidenceLodging"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+  
+onlim:RescueHut
+  rdfs:subClassOf onlim:Hut ;
+  a rdfs:Class ;
+  rdfs:label "RescueHut"@en .
+
+onlim:Sanatorium
+  a rdfs:Class ;
+  rdfs:label "Sanatorium"@en ;
+  rdfs:subClassOf schema:Hospital, schema:LodgingBusiness . 
+  
+onlim:SelfCateringFacility
+  a rdfs:Class ;
+  rdfs:label "SelfCateringFacility"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+  
+onlim:SelfCateringHouse
+  a rdfs:Class ;
+  rdfs:label "SelfCateringHouse"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .  
+  
+onlim:ServicedHut
+  a rdfs:Class ;
+  rdfs:label "ServicedHut"@en ;
+  rdfs:subClassOf onlim:Hut .     
+  
+onlim:SpaHotel
+  a rdfs:Class ;
+  rdfs:label "SpaHotel"@en ;
+  rdfs:subClassOf schema:Hotel .  
+  
+onlim:StudentLodging
+  a rdfs:Class ;
+  rdfs:label "StudentLodging"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .  
+  
+onlim:ThatchingLodging
+  a rdfs:Class ;
+  rdfs:label "ThatchingLodging"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .  
+  
+onlim:VineyardCottage
+  a rdfs:Class ;
+  rdfs:label "VineyardCottage"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+  
+ onlim:WineryLodging
+  a rdfs:Class ;
+  rdfs:label "WineryLodging"@en ;
+  rdfs:subClassOf schema:LodgingBusiness .
+  
+onlim:YouthHostel
+  a rdfs:Class ;
+  rdfs:label "YouthHostel"@en ;
+  rdfs:subClassOf schema:Hostel .
+  
