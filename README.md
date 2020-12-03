@@ -1,5 +1,7 @@
 # odta schema
 
+This repository is superseding https://github.com/STIInnsbruck/dachkg-schema which becomes deprecated.
+
 The Open Data Tourism Alliance is defining a **schema.org**-based vocabulary to semantically describe touristic content. The expressivity of schema.org is limited and that is why the ODTA needs to extends the vocabulary of schema.org and publishes this vocabulary extension (schema) here.
 
 In this repository we host two types of extensions:
