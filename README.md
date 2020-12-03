@@ -110,6 +110,8 @@ or like that (in JSON-LD syntax):
 
 ## DomainSpecifications using the extensions
 
-* Trail: https://ds.sti2.org/TQyCYm-r5
+* Trail: https://semantify.it/ds/nBTyKDsKX
+
+All DomainSpecifications and the respective description can be found under https://github.com/ODTA/ds.
 
 For more information please contact the editors of this file and repository or write an email to elias.kaerle [a t] sti2.at or umutcan.simsek [a t] sti2.at.
