@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "odta": "https://odta.io/voc/"
+  },
+  "@graph": [
+    {
+      "@id": "odta:PointOfInterest",
+      "rdfs:subClassOf": {
+        "@id": "schema:Place"
+      },
+      "rdfs:label": {
+        "@value": "PointOfInterest",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Every place that is of potential interest for anyone - mostly tourists. It is more than schema:TouristAttraction, because an ATM is a POI, but not a tourist attraction. Same goes for public toilets and alike.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    }
+  ]
+}
