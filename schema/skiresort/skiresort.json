@@ -23,6 +23,21 @@
       "@type": "rdfs:Class"
     },
     {
+      "@id": "schema:SportsActivityLocation",
+      "rdfs:subClassOf": {
+        "@id": "odta:SportsPlace"
+      },
+      "rdfs:label": {
+        "@value": "SportsActivityLocation",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A sports location, such as a playing field.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
       "@id": "odta:FunPark",
       "rdfs:subClassOf": {
         "@id": "odta:SportsPlace"
@@ -40,7 +55,7 @@
     {
       "@id": "odta:SkiLift",
       "rdfs:subClassOf": {
-        "@id": "odta:SportsPlace"
+        "@id": "schema:CivicStructure"
       },
       "rdfs:label": {
         "@value": "SkiLift",
@@ -48,21 +63,6 @@
       },
       "rdfs:comment": {
         "@value": "A means of transport or carriage, mostly up a hill or mountain, for e.g. skiers.",
-        "@language": "en"
-      },
-      "@type": "rdfs:Class"
-    },
-    {
-      "@id": "schema:SkiResort",
-      "rdfs:subClassOf": {
-        "@id": "odta:SportsPlace"
-      },
-      "rdfs:label": {
-        "@value": "SkiResort",
-        "@language": "en"
-      },
-      "rdfs:comment": {
-        "@value": "A ski resort.",
         "@language": "en"
       },
       "@type": "rdfs:Class"
