@@ -98,21 +98,6 @@
       "@type": "rdfs:Class"
     },
     {
-      "@id": "odta:OpeningStatus",
-      "rdfs:subClassOf": {
-        "@id": "schema:StatusEnumeration"
-      },
-      "rdfs:label": {
-        "@value": "OpenStatus",
-        "@language": "en"
-      },
-      "rdfs:comment": {
-        "@value": "The opening status of an element.",
-        "@language": "en"
-      },
-      "@type": "rdfs:Class"
-    },
-    {
       "@id": "odta:SkiLiftType",
       "rdfs:subClassOf": {
         "@id": "schema:Enumeration"
@@ -171,24 +156,6 @@
         "@language": "en"
       },
       "@type": "rdfs:Class"
-    },
-    {
-      "@id": "odta:status",
-      "schema:domainIncludes": {
-        "@id": "schema:Place"
-      },
-      "schema:rangeIncludes": {
-        "@id": "odta:OpeningStatus"
-      },
-      "rdfs:label": {
-        "@value": "status",
-        "@language": "en"
-      },
-      "rdfs:comment": {
-        "@value": "Open status of the place.",
-        "@language": "en"
-      },
-      "@type": "rdf:Property"
     },
     {
       "@id": "odta:distance",
@@ -788,54 +755,6 @@
         "@language": "en"
       },
       "@type": "rdf:Property"
-    },
-    {
-      "@id": "odta:Closed",
-      "@type": "odta:OpeningStatus",
-      "rdfs:label": {
-        "@value": "Closed",
-        "@language": "en"
-      },
-      "rdfs:comment": {
-        "@value": "Signalizes that the given element is closed.",
-        "@language": "en"
-      }
-    },
-    {
-      "@id": "odta:NoInformation",
-      "@type": "odta:OpeningStatus",
-      "rdfs:label": {
-        "@value": "NoInformation",
-        "@language": "en"
-      },
-      "rdfs:comment": {
-        "@value": "There are no information on the opening status of the given element.",
-        "@language": "en"
-      }
-    },
-    {
-      "@id": "odta:Open",
-      "@type": "odta:OpeningStatus",
-      "rdfs:label": {
-        "@value": "Open",
-        "@language": "en"
-      },
-      "rdfs:comment": {
-        "@value": "The given element is open.",
-        "@language": "en"
-      }
-    },
-    {
-      "@id": "odta:WeekendOnly",
-      "@type": "odta:OpeningStatus",
-      "rdfs:label": {
-        "@value": "WeekendOnly",
-        "@language": "en"
-      },
-      "rdfs:comment": {
-        "@value": "The given element opens on the weekend only.",
-        "@language": "en"
-      }
     },
     {
       "@id": "odta:ButtonLift",
