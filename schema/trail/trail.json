@@ -2,7 +2,7 @@
   "@context": {
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "schema": "http://schema.org/",
+    "schema": "https://schema.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "odta": "https://odta.io/voc/"
   },
@@ -35,7 +35,7 @@
         "@language": "en"
       },
       "rdfs:comment": {
-        "@value": "A sub property of schema.org location. The final location of the trail.",
+        "@value": "A sub property of schema.org location. The start location of the trail.",
         "@language": "en"
       },
       "rdfs:subPropertyOf": {
@@ -56,7 +56,7 @@
         "@language": "en"
       },
       "rdfs:comment": {
-        "@value": "A sub property of schema.org location. The final location of the trail.",
+        "@value": "A sub property of schema.org location. The end location of the trail.",
         "@language": "en"
       },
       "rdfs:subPropertyOf": {
@@ -82,7 +82,7 @@
         "@language": "en"
       },
       "rdfs:comment": {
-        "@value": "A waypoint is an intermediate point or place or stoping point on a trail or line of travel.",
+        "@value": "A waypoint is an intermediate point or place or stopping point on a trail or line of travel.",
         "@language": "en"
       },
       "@type": "rdf:Property"
