@@ -39,8 +39,8 @@ suppose we have a company called **the super tourism data provider** or short **
 Your extension file, based on the provided template, would then either look like this (in Turtle syntax):
 
 ```turtle
-@prefix odta: <http://http://odta.io/voc/> .
-@prefix schema: <http://schema.org/> .
+@prefix odta: <https://odta.io/voc/> .
+@prefix schema: <https://schema.org/> .
 @prefix tstdp: <https://thesuperprovider.com/ontology/1.0/> .
 
 ##Classes
@@ -65,11 +65,11 @@ or like that (in JSON-LD syntax):
 ```json
 {
   "@context": {
-    "odta": "http://http://odta.io/voc/",
+    "odta": "https://odta.io/voc/",
     "my-comp": "https://my-company.org/ontology/1.0/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "schema": "http://schema.org/",
+    "schema": "https://schema.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
