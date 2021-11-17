@@ -1,0 +1,1117 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "odta": "https://odta.io/voc/"
+  },
+  "@graph": [
+    {
+      "@id": "odta:SportsPlace",
+      "rdfs:subClassOf": {
+        "@id": "schema:Place"
+      },
+      "rdfs:label": {
+        "@value": "SportsPlace",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A place for sports activities that do not fulfill the properties of a local business (e.g. public soccer place, ski slope on a mountain, ...)",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "schema:SportsActivityLocation",
+      "rdfs:subClassOf": {
+        "@id": "odta:SportsPlace"
+      },
+      "rdfs:label": {
+        "@value": "SportsActivityLocation",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A sports location, such as a playing field.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:FunPark",
+      "rdfs:subClassOf": {
+        "@id": "odta:SportsPlace"
+      },
+      "rdfs:label": {
+        "@value": "FunPark",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A fun park.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:SkiLift",
+      "rdfs:subClassOf": {
+        "@id": "schema:CivicStructure"
+      },
+      "rdfs:label": {
+        "@value": "SkiLift",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A means of transport or carriage, mostly up a hill or mountain, for e.g. skiers.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:SkiSlope",
+      "rdfs:subClassOf": {
+        "@id": "odta:SportsPlace"
+      },
+      "rdfs:label": {
+        "@value": "SkiSlope",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A means of driving down a mountain by ski.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:SnowConditionReport",
+      "rdfs:subClassOf": {
+        "@id": "schema:DataFeed"
+      },
+      "rdfs:label": {
+        "@value": "SnowConditionReport",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A collection or feed of snow condition measurements",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:OpeningStatus",
+      "rdfs:subClassOf": {
+        "@id": "schema:StatusEnumeration"
+      },
+      "rdfs:label": {
+        "@value": "OpenStatus",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The opening status of an element.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:SkiLiftType",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      },
+      "rdfs:label": {
+        "@value": "SkiLiftType",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Type of ski lift.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:SkiSlopeCondition",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      },
+      "rdfs:label": {
+        "@value": "SlopeState",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The state of a slope.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:SkiSlopeDifficulty",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      },
+      "rdfs:label": {
+        "@value": "SkiSlopeDifficulty",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The difficulty of a ski slope.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:SkiSlopeType",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      },
+      "rdfs:label": {
+        "@value": "SkiSlopeType",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The concrete type of a ski slope.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:status",
+      "schema:domainIncludes": {
+        "@id": "schema:Place"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:OpeningStatus"
+      },
+      "rdfs:label": {
+        "@value": "status",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Open status of the place.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:distance",
+      "schema:domainIncludes": [
+        {
+          "@id": "odta:SkiLift"
+        },
+        {
+          "@id": "odta:SkiSlope"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "schema:Distance"
+      },
+      "rdfs:label": {
+        "@value": "distance",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The distance travelled, e.g. exercising or travelling.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:elevationEnd",
+      "rdfs:subPropertyOf": {
+        "@id": "schema:elevation"
+      },
+      "schema:domainIncludes": [
+        {
+          "@id": "odta:SkiLift"
+        },
+        {
+          "@id": "odta:SkiSlope"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Number"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:label": {
+        "@value": "elevationEnd",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Elevation at the end or top of the lift.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:elevationStart",
+      "rdfs:subPropertyOf": {
+        "@id": "schema:elevation"
+      },
+      "schema:domainIncludes": [
+        {
+          "@id": "odta:SkiLift"
+        },
+        {
+          "@id": "odta:SkiSlope"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Number"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:label": {
+        "@value": "elevationStart",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Elevation at the start or bottom of the lift.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:snowConditions",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:SkiResort"
+        },
+        {
+          "@id": "odta:SkiSlope"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "odta:SnowConditionReport"
+      },
+      "rdfs:label": {
+        "@value": "snowConditions",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Report of the snow conditions of a ski resort or ski slope.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:firstAscent",
+      "schema:domainIncludes": {
+        "@id": "odta:SkiLift"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Time"
+      },
+      "rdfs:label": {
+        "@value": "firstAscent",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Time of the first ride towards the top of the mountain",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:lastAscent",
+      "schema:domainIncludes": {
+        "@id": "odta:SkiLift"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Time"
+      },
+      "rdfs:label": {
+        "@value": "lastAscent",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Time of the last ride towards the top of the mountain",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:lastDecent",
+      "schema:domainIncludes": {
+        "@id": "odta:SkiLift"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Time"
+      },
+      "rdfs:label": {
+        "@value": "lastDescent",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Time of the last ride towards the valley.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:numberOfStops",
+      "schema:domainIncludes": {
+        "@id": "odta:SkiLift"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Number"
+      },
+      "rdfs:label": {
+        "@value": "numberOfStops",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The number of stops on a journey, route or ride. At least two (start and end) is normal but some can have additional stops.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:skiLiftType",
+      "schema:domainIncludes": {
+        "@id": "odta:SkiLift"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "odta:SkiLiftType"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:label": {
+        "@value": "skiLiftType",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Type of Ski lift, e.g. t-bar lift, cable car or chairlift",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:transportCapacity",
+      "schema:domainIncludes": {
+        "@id": "odta:SkiLift"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:label": {
+        "@value": "transportCapacity",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Number of units, something can transport. (Bus transports people, container ship transports containers ...)",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:skiLiftStatus",
+      "schema:domainIncludes": {
+        "@id": "odta:SkiLift"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:OpeningStatus"
+      },
+      "rdfs:label": {
+        "@value": "status",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Status of the ski lift.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:hasSkiLift",
+      "schema:domainIncludes": {
+        "@id": "schema:SkiResort"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:SkiLift"
+      },
+      "rdfs:label": {
+        "@value": "hasSkiLift",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A ski lift that belongs to this ski resort.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:hasSkiSlope",
+      "schema:domainIncludes": {
+        "@id": "schema:SkiResort"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:SkiSlope"
+      },
+      "rdfs:label": {
+        "@value": "hasSkiSlope",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A ski slope that belong to this ski resort.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:maxElevation",
+      "rdfs:subPropertyOf": {
+        "@id": "schema:elevation"
+      },
+      "schema:domainIncludes": {
+        "@id": "schema:SkiResort"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Number"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:label": {
+        "@value": "maxElevation",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The highest elevation of the SkiResort",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:minElevation",
+      "rdfs:subPropertyOf": {
+        "@id": "schema:elevation"
+      },
+      "schema:domainIncludes": {
+        "@id": "schema:SkiResort"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Number"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:label": {
+        "@value": "minElevation",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The lowest elevation of the SkiResort",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:seasonEnd",
+      "schema:domainIncludes": {
+        "@id": "schema:SkiResort"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Date"
+      },
+      "rdfs:label": {
+        "@value": "seasonEnd",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The end date of the saison",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:seasonStart",
+      "schema:domainIncludes": {
+        "@id": "schema:SkiResort"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Date"
+      },
+      "rdfs:label": {
+        "@value": "seasonStart",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The start date of the saison",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:webcam",
+      "schema:domainIncludes": {
+        "@id": "schema:SkiResort"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:MediaObject"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ],
+      "rdfs:label": {
+        "@value": "webcam",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A webcam that belongs to this ski resort.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:skiSlopeDifficulty",
+      "schema:domainIncludes": {
+        "@id": "odta:SkiSlope"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "odta:SkiSlopeDifficulty"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:label": {
+        "@value": "skiSlopeDifficulty",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Difficulty of the slope, e.g blue, red, black or skiroute.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:skiSlopeType",
+      "schema:domainIncludes": {
+        "@id": "odta:SkiSlope"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "odta:SkiSlopeType"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:label": {
+        "@value": "skiSlopeType",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Type of ski slope.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:slopeNumber",
+      "schema:domainIncludes": {
+        "@id": "odta:SkiSlope"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Number"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:label": {
+        "@value": "slopeNumber",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The primary key or UID for slopes inside a ski resort.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:skiSlopeCondition",
+      "schema:domainIncludes": {
+        "@id": "odta:SkiSlope"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:SkiSlopeCondition"
+      },
+      "rdfs:label": {
+        "@value": "slopState",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "State of the slope.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:skiSlopeStatus",
+      "schema:domainIncludes": {
+        "@id": "odta:SkiSlope"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:OpeningStatus"
+      },
+      "rdfs:label": {
+        "@value": "status",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Status of the ski slope.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:freshFallenSnow",
+      "schema:domainIncludes": {
+        "@id": "odta:SnowConditionReport"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:label": {
+        "@value": "freshFallenSnow",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Height of fresh fallen snow.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:lastSnowfall",
+      "schema:domainIncludes": {
+        "@id": "odta:SnowConditionReport"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Date"
+      },
+      "rdfs:label": {
+        "@value": "lastSnowfall",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Date of last snow fall.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:maxSnowHeight",
+      "schema:domainIncludes": {
+        "@id": "odta:SnowConditionReport"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:label": {
+        "@value": "maxSnowHeight",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The maximum snow height.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:minSnowHeight",
+      "schema:domainIncludes": {
+        "@id": "odta:SnowConditionReport"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:label": {
+        "@value": "minSnowHeight",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The minimum snow height.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:snowCondition",
+      "schema:domainIncludes": {
+        "@id": "odta:SnowConditionReport"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:label": {
+        "@value": "snowCondition",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Current snow conditions (e.g., fresh, wet, ...).",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:snowType",
+      "schema:domainIncludes": {
+        "@id": "odta:SnowConditionReport"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:label": {
+        "@value": "snowType",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Type of snow (e.g., artificial, ...)",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:Closed",
+      "@type": "odta:OpeningStatus",
+      "rdfs:label": {
+        "@value": "Closed",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Signalizes that the given element is closed.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:NoInformation",
+      "@type": "odta:OpeningStatus",
+      "rdfs:label": {
+        "@value": "NoInformation",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "There are no information on the opening status of the given element.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:Open",
+      "@type": "odta:OpeningStatus",
+      "rdfs:label": {
+        "@value": "Open",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The given element is open.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:WeekendOnly",
+      "@type": "odta:OpeningStatus",
+      "rdfs:label": {
+        "@value": "WeekendOnly",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The given element opens on the weekend only.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:ButtonLift",
+      "@type": "odta:SkiLiftType",
+      "rdfs:label": {
+        "@value": "ButtonLift",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A button lift.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:CableCar",
+      "@type": "odta:SkiLiftType",
+      "rdfs:label": {
+        "@value": "CableCar",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A cable car lift.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:ChairLift",
+      "@type": "odta:SkiLiftType",
+      "rdfs:label": {
+        "@value": "ChairLift",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A chair lift.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:Funicular",
+      "@type": "odta:SkiLiftType",
+      "rdfs:label": {
+        "@value": "Funicular",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A funicular.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:MagicCarpet",
+      "@type": "odta:SkiLiftType",
+      "rdfs:label": {
+        "@value": "MagicCarpet",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A magic carpet.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:RopeTow",
+      "@type": "odta:SkiLiftType",
+      "rdfs:label": {
+        "@value": "RopeTow",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A rope tow.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:PracticeLift",
+      "@type": "odta:SkiLiftType",
+      "rdfs:label": {
+        "@value": "PracticeLift",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A practice lift.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:TBarLift",
+      "@type": "odta:SkiLiftType",
+      "rdfs:label": {
+        "@value": "TBarLift",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A T-Bar lift",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:Bad",
+      "@type": "odta:SkiSlopeCondition",
+      "rdfs:label": {
+        "@value": "Bad",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Slope is in bad condition",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:PartiallyBad",
+      "@type": "odta:SkiSlopeCondition",
+      "rdfs:label": {
+        "@value": "BadInPlaces",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Slope is bad in some places",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:Good",
+      "@type": "odta:SkiSlopeCondition",
+      "rdfs:label": {
+        "@value": "Good",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Slope is in good condition",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:Icy",
+      "@type": "odta:SkiSlopeCondition",
+      "rdfs:label": {
+        "@value": "Icy",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Slope is icy.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:PartiallyIcy",
+      "@type": "odta:SkiSlopeCondition",
+      "rdfs:label": {
+        "@value": "IcyInPlaces",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Slope is icy in some places.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:Ridable",
+      "@type": "odta:SkiSlopeCondition",
+      "rdfs:label": {
+        "@value": "Ridable",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Slope is ridable.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:Wet",
+      "@type": "odta:SkiSlopeCondition",
+      "rdfs:label": {
+        "@value": "Wet",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Slope is wet.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:Easy",
+      "@type": "odta:SkiSlopeDifficulty",
+      "rdfs:label": {
+        "@value": "Easy",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Easy route mostly signalized with the blue color.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:Medium",
+      "@type": "odta:SkiSlopeDifficulty",
+      "rdfs:label": {
+        "@value": "Medium",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Medium route mostly signalized with the red color.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:Hard",
+      "@type": "odta:SkiSlopeDifficulty",
+      "rdfs:label": {
+        "@value": "Hard",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Hard route mostly signalized with the black color.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:Route",
+      "@type": "odta:SkiSlopeDifficulty",
+      "rdfs:label": {
+        "@value": "Route",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Ski route.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:DifficultRoute",
+      "@type": "odta:SkiSlopeDifficulty",
+      "rdfs:label": {
+        "@value": "DifficultRoute",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Difficult ski route.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:MogulSlope",
+      "@type": "odta:SkiSlopeType",
+      "rdfs:label": {
+        "@value": "MogulSlope",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A mogul slope.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:PracticeSlope",
+      "@type": "odta:SkiSlopeType",
+      "rdfs:label": {
+        "@value": "PracticeSlope",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A practice slope.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:SkiRoute",
+      "@type": "odta:SkiSlopeType",
+      "rdfs:label": {
+        "@value": "SkiRoute",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A ski route.",
+        "@language": "en"
+      }
+    }
+  ]
+}
