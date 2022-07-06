@@ -4,11 +4,11 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "schema": "http://schema.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "goodrelations":"http://purl.org/goodrelations/v1#"
+    "gr":"http://purl.org/goodrelations/v1#"
   },
   "@graph": [
     {
-      "@id": "goodrelations:ByBankTransferInAdvance",
+      "@id": "gr:ByBankTransferInAdvance",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "By bank transfer in advance",
@@ -20,7 +20,7 @@
       }
     },
     {
-      "@id": "goodrelations:ByInvoice",
+      "@id": "gr:ByInvoice",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "By invoice",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "@id": "goodrelations:Cash",
+      "@id": "gr:Cash",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "Cash",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "@id": "goodrelations:CheckInAdvance",
+      "@id": "gr:CheckInAdvance",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "Check in advance",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "@id": "goodrelations:COD",
+      "@id": "gr:COD",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "COD",
@@ -68,7 +68,7 @@
       }
     },
     {
-      "@id": "goodrelations:DirectDebit",
+      "@id": "gr:DirectDebit",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "Direct debit",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "@id": "goodrelations:GoogleCheckout",
+      "@id": "gr:GoogleCheckout",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "Google Checkout",
@@ -92,7 +92,7 @@
       }
     },
     {
-      "@id": "goodrelations:PayPal",
+      "@id": "gr:PayPal",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "PayPal",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "@id": "goodrelations:PaySwarm",
+      "@id": "gr:PaySwarm",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "PaySwarm",
@@ -116,7 +116,7 @@
       }
     },
     {
-      "@id": "goodrelations:AmericanExpress",
+      "@id": "gr:AmericanExpress",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "American Express",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "@id": "goodrelations:DinersClub",
+      "@id": "gr:DinersClub",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "Diners Club",
@@ -140,7 +140,7 @@
       }
     },
     {
-      "@id": "goodrelations:Discover",
+      "@id": "gr:Discover",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "Discover",
@@ -152,7 +152,7 @@
       }
     },
     {
-      "@id": "goodrelations:JCB",
+      "@id": "gr:JCB",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "JCB",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "@id": "goodrelations:MasterCard",
+      "@id": "gr:MasterCard",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "MasterCard",
@@ -176,7 +176,7 @@
       }
     },
     {
-      "@id": "goodrelations:VISA",
+      "@id": "gr:VISA",
       "@type": "schema:PaymentMethod",
       "rdfs:label": {
         "@value": "VISA",
