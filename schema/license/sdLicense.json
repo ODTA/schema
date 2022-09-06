@@ -28,6 +28,47 @@
         "@language": "en"
       },
       "@type": "rdf:Property"
+    },
+    {
+      "@id": "schema:sdDatePublished",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicates the date on which the current structured data was generated / published. Typically used alongside [[sdPublisher]]",
+      "rdfs:label": "sdDatePublished",
+      "schema:domainIncludes": {
+        "@id": "schema:Thing"
+      },
+      "schema:isPartOf": {
+        "@id": "http://pending.schema.org"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Date"
+      },
+      "schema:source": {
+        "@id": "https://github.com/schemaorg/schemaorg/issues/1886"
+      }
+    },
+    {
+      "@id": "schema:sdPublisher",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The\n[[sdPublisher]] property helps make such practices more explicit.",
+      "rdfs:label": "sdPublisher",
+      "schema:domainIncludes": {
+        "@id": "schema:Thing"
+      },
+      "schema:isPartOf": {
+        "@id": "http://pending.schema.org"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Organization"
+        },
+        {
+          "@id": "schema:Person"
+        }
+      ],
+      "schema:source": {
+        "@id": "https://github.com/schemaorg/schemaorg/issues/1886"
+      }
     }
   ]
 }
