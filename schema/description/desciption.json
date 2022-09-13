@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "schema:description",
+      "schema:domainIncludes": {
+        "@id": "schema:Thing"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:CreativeWork"
+        }
+      ],
+      "rdfs:label": {
+        "@value": "description",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A description of the item.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    }
+  ]
+}
