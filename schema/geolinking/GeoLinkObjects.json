@@ -116,36 +116,6 @@
       "@type": "rdfs:Class"
     },
     {
-      "@id": "odta:linkObject",
-      "schema:domainIncludes": {
-        "@id": "odta:GeoLinkObject"
-      },
-      "schema:rangeIncludes": {
-        "@id": "schema:Place"
-      },
-      "rdfs:label": [
-        {
-          "@value": "verlinktes Object",
-          "@language": "de"
-        },
-        {
-          "@value": "linked Object",
-          "@language": "en"
-        }
-      ],
-      "rdfs:comment": [
-        {
-          "@value": "noch nicht vorhanden",
-          "@language": "de"
-        },
-        {
-          "@value": "Expected or actual outcomes of the study.",
-          "@language": "en"
-        }
-      ],
-      "@type": "rdf:Property"
-    },
-    {
       "@id": "odta:geoLink",
       "schema:domainIncludes": {
         "@id": "schema:Place"
@@ -263,6 +233,9 @@
           "@language": "en"
         }
       ],
+      "rdfs:subPropertyOf": {
+        "@id": "odta:linkObject"
+      },
       "@type": "rdf:Property"
     },
     {
@@ -293,6 +266,9 @@
           "@language": "en"
         }
       ],
+      "rdfs:subPropertyOf": {
+        "@id": "odta:linkObject"
+      },
       "@type": "rdf:Property"
     },
     {
@@ -530,6 +506,36 @@
         },
         {
           "@value": "The value of a measurement.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:linkObject",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Place"
+      },
+      "rdfs:label": [
+        {
+          "@value": "verlinktes Object",
+          "@language": "de"
+        },
+        {
+          "@value": "linked Object",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Superproperty von linkSource und linkTarget.",
+          "@language": "de"
+        },
+        {
+          "@value": "Super property of linkSource and linkTarget.",
           "@language": "en"
         }
       ],
