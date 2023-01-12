@@ -1,0 +1,210 @@
+{
+    "@context": {
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "schema": "https://schema.org/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "odta": "https://odta.io/voc/"
+    },
+    "@graph": [
+      {
+        "@id": "odta:EChargingStation",
+        "rdfs:subClassOf": {
+          "@id": "schema:LocalBusiness"
+        },
+        "rdfs:label": [
+          {
+            "@value": "Ladestation",
+            "@language": "de"
+          },
+          {
+            "@value": "electric charging station",
+            "@language": "en"
+          }
+        ],
+        "rdfs:comment": [
+          {
+            "@value": "Eine elektrische Ladestation für zum Beispiel elektrisch betriebene Fahrräder oder Autos.",
+            "@language": "de"
+          },
+          {
+            "@value": "An electric charging station for ebikes or ecars.",
+            "@language": "en"
+          }
+        ],
+        "@type": "rdfs:Class"
+      },
+      {
+        "@id": "odta:EBikeChargingStation",
+        "rdfs:subClassOf": {
+          "@id": "odta:EChargingStation"
+        },
+        "rdfs:label": [
+          {
+            "@value": "E-Bike Ladestation",
+            "@language": "de"
+          },
+          {
+            "@value": "eBike charging station",
+            "@language": "en"
+          }
+        ],
+        "rdfs:comment": [
+          {
+            "@value": "Eine Ladestation für e-Bikes.",
+            "@language": "de"
+          },
+          {
+            "@value": "A charging station for e-bikes.",
+            "@language": "en"
+          }
+        ],
+        "@type": "rdfs:Class"
+      },
+      {
+        "@id": "odta:ECarChargingStation",
+        "rdfs:subClassOf": {
+          "@id": "odta:EChargingStation"
+        },
+        "rdfs:label": [
+          {
+            "@value": "Ladestation für Elektroautos",
+            "@language": "de"
+          },
+          {
+            "@value": "eCar charging station",
+            "@language": "en"
+          }
+        ],
+        "rdfs:comment": [
+          {
+            "@value": "Eine Ladestation für e-Autos.",
+            "@language": "de"
+          },
+          {
+            "@value": "A charging station for e-cars.",
+            "@language": "en"
+          }
+        ],
+        "@type": "rdfs:Class"
+      },
+      {
+        "@id": "odta:Charger",
+        "rdfs:subClassOf": {
+          "@id": "schema:Thing"
+        },
+        "rdfs:label": [
+          {
+            "@value": "Ladesäule",
+            "@language": "de"
+          },
+          {
+            "@value": "Charger",
+            "@language": "en"
+          }
+        ],
+        "rdfs:comment": [
+          {
+            "@value": "Eine Ladesäule oder -möglichkeit an einer eCharging Station.",
+            "@language": "de"
+          },
+          {
+            "@value": "A charger at an eChargingStation.",
+            "@language": "en"
+          }
+        ],
+        "@type": "rdfs:Class"
+      },
+      {
+        "@id": "odta:hasCharger",
+        "schema:domainIncludes": {
+          "@id": "odta:EChargingStation"
+        },
+        "schema:rangeIncludes": {
+          "@id": "odta:Charger"
+        },
+        "rdfs:label": [
+          {
+            "@value": "hasCharger",
+            "@language": "de"
+          },
+          {
+            "@value": "hasCharger",
+            "@language": "en"
+          }
+        ],
+        "rdfs:comment": [
+          {
+            "@value": "Eine Ladesäule oder -möglichkeit an einer eCharging Station.",
+            "@language": "de"
+          },
+          {
+            "@value": "A charger at an EChargingStation.",
+            "@language": "en"
+          }
+        ],
+        "@type": "rdf:Property"
+      },
+      {
+        "@id": "odta:power",
+        "schema:domainIncludes": {
+          "@id": "odta:Charger"
+        },
+        "schema:rangeIncludes": {
+          "@id": "schema:QuantitativeValue"
+        },
+        "rdfs:label": [
+          {
+            "@value": "leistung",
+            "@language": "de"
+          },
+          {
+            "@value": "power",
+            "@language": "en"
+          }
+        ],
+        "rdfs:comment": [
+          {
+            "@value": "Die maximale Ladeleistung einer Ladesäule.",
+            "@language": "de"
+          },
+          {
+            "@value": "The maximum charging power of a charger.",
+            "@language": "en"
+          }
+        ],
+        "@type": "rdf:Property"
+      },
+      {
+        "@id": "odta:socket",
+        "schema:domainIncludes": {
+          "@id": "odta:Charger"
+        },
+        "schema:rangeIncludes": {
+          "@id": "schema:Text"
+        },
+        "rdfs:label": [
+          {
+            "@value": "steckertyp",
+            "@language": "de"
+          },
+          {
+            "@value": "socket",
+            "@language": "en"
+          }
+        ],
+        "rdfs:comment": [
+          {
+            "@value": "Der Steckertyp der Ladesäule.",
+            "@language": "de"
+          },
+          {
+            "@value": "The socket type of a charger.",
+            "@language": "en"
+          }
+        ],
+        "@type": "rdf:Property"
+      }
+    ]
+  }
+  
