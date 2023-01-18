@@ -136,15 +136,15 @@
       "@type": "rdf:Property"
     },
     {
-      "@id": "odta:kindOfTrail",
+      "@id": "odta:typeOfTrail",
       "schema:domainIncludes": {
         "@id": "odta:Trail"
       },
       "schema:rangeIncludes": {
-        "@id": "odta:TrailEnumeration"
+        "@id": "schema:Text"
       },
       "rdfs:label": {
-        "@value": "kindOfTrail",
+        "@value": "typeOfTrail",
         "@language": "en"
       },
       "rdfs:comment": {
