@@ -23,6 +23,51 @@
       "@type": "rdfs:Class"
     },
     {
+      "@id": "odta:TrailDifficultySpecification",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      },
+      "rdfs:label": {
+        "@value": "TrailDifficultySpecification",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A structured value providing infomation about the difficulty of a trail.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:TrailEnumeration",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      },
+      "rdfs:label": {
+        "@value": "TrailEnumeration",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "An enumeration type whose instances are potential trail types.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:SACScale",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      },
+      "rdfs:label": {
+        "@value": "SACScale",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A trail difficulty scale between 1 and 6. Grade 1 is the easiest, Grade 6 is the hardest. https://de.wikipedia.org/wiki/SAC-Wanderskala",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
       "@id": "odta:startLocation",
       "schema:domainIncludes": {
         "@id": "odta:Trail"
@@ -85,25 +130,280 @@
         "@value": "A waypoint is an intermediate point or place or stopping point on a trail or line of travel.",
         "@language": "en"
       },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:containsPlace"
+      },
       "@type": "rdf:Property"
     },
     {
-      "@id": "odta:typeOfTrail",
+      "@id": "odta:kindOfTrail",
       "schema:domainIncludes": {
         "@id": "odta:Trail"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:TrailEnumeration"
+      },
+      "rdfs:label": {
+        "@value": "kindOfTrail",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The kind of a trail.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:length",
+      "schema:domainIncludes": {
+        "@id": "odta:Trail"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:label": {
+        "@value": "length",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The length of the trail",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:estimatedDuration",
+      "schema:domainIncludes": {
+        "@id": "odta:Trail"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Duration"
+      },
+      "rdfs:label": {
+        "@value": "duration",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The estimated duration to complete the trail.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:highestPoint",
+      "schema:domainIncludes": {
+        "@id": "odta:Trail"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:label": {
+        "@value": "highestPoint",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The altitude of the highest point of a trail",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:lowestPoint",
+      "schema:domainIncludes": {
+        "@id": "odta:Trail"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:label": {
+        "@value": "lowestPoint",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The altitude of the lowest point of a trail",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:uphillElevation",
+      "schema:domainIncludes": {
+        "@id": "odta:Trail"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:label": {
+        "@value": "uphillElevation",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The elevation gain when going uphill on a trail",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:downhillElevation",
+      "schema:domainIncludes": {
+        "@id": "odta:Trail"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:label": {
+        "@value": "downhillElevation",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The vertical elevation loss when going downhill on a trail",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:difficulty",
+      "schema:domainIncludes": {
+        "@id": "odta:Trail"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:TrailDifficultySpecification"
+      },
+      "rdfs:label": {
+        "@value": "difficulty",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Difficulty of a trail",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:circularTrail",
+      "schema:domainIncludes": {
+        "@id": "odta:Trail"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Boolean"
+      },
+      "rdfs:label": {
+        "@value": "circularTrail",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "An indicator for whether the start and end location of the Trail is the same.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:grade",
+      "schema:domainIncludes": {
+        "@id": "odta:TrailDifficultySpecification"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:SACScale"
+      },
+      "rdfs:label": {
+        "@value": "grade",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "The difficulty grade according to some scale. Currrently SAC Scale is used.",
+        "@language": "en"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:equipmentNeeded",
+      "schema:domainIncludes": {
+        "@id": "odta:TrailDifficultySpecification"
       },
       "schema:rangeIncludes": {
         "@id": "schema:Text"
       },
       "rdfs:label": {
-        "@value": "typeOfTrail",
+        "@value": "equipmentNeeded",
         "@language": "en"
       },
       "rdfs:comment": {
-        "@value": "The type of a trail.",
+        "@value": "An indicator for the recommended equipment to complete the trail",
         "@language": "en"
       },
       "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:T1",
+      "@type": "odta:SACScale",
+      "rdfs:label": {
+        "@value": "T1 - Hiking",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "No particular challenge. Easy orientation, can be posible done with sneakers.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:T2",
+      "@type": "odta:",
+      "rdfs:label": {
+        "@value": "T2 - Mountain hiking",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A little surefootedness required. Good trekking shoes are recommended. Basic orientation skills needed.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:T3",
+      "@type": "odta:SACScale",
+      "rdfs:label": {
+        "@value": "T3 - Challenging mountain hiking",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Good surefootedness required. Trekking shoes are recommended. Average orientation skills and familiarity with alpine environment recommended",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:T4",
+      "@type": "odta:SACScale",
+      "rdfs:label": {
+        "@value": "T4 - Alpine hiking",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Skills for hiking in steep terrain is required. Stable trekking shoes are recommended. Good orientation skills and familiarity with the alpine environment needed. Under bad weather conditions can be particularly challenging.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:T5",
+      "@type": "odta:SACScale",
+      "rdfs:label": {
+        "@value": "T5 - Challenging alpine hiking",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Mountaineering boots are recommended. Good terrain judgement skills and very good orientation skills are needed. High experience in high alpine terrain is required. Experience with ice axe and ropes are recommended.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:T6",
+      "@type": "odta:SACScale",
+      "rdfs:label": {
+        "@value": "T6 - Difficult alpine hiking",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Excellent orientation skills are required. High experience in alpine environment and certain alpine equipment is recommended",
+        "@language": "en"
+      }
     }
   ]
 }
