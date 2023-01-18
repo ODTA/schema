@@ -1,0 +1,545 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "odta": "https://odta.io/voc/"
+  },
+  "@graph": [
+    {
+      "@id": "odta:LinkObject",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Linkobjekt",
+          "@language": "de"
+        },
+        {
+          "@value": "LinkObject",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Ein Objekt das Informationen über die Verlinkung zweier oder mehrerer Objekte enthält.",
+          "@language": "de"
+        },
+        {
+          "@value": "An object containing information about the linking of two or more objects.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:GeoLinkObject",
+      "rdfs:subClassOf": {
+        "@id": "odta:LinkObject"
+      },
+      "rdfs:label": [
+        {
+          "@value": "GeoVerlinkung",
+          "@language": "de"
+        },
+        {
+          "@value": "GeoLinking",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Ein Objekt das Informationen über die Verlinkung zweier oder mehrerer GeoObjekte (schema:Places) enthält.",
+          "@language": "de"
+        },
+        {
+          "@value": "An object containing information about the linking of two or more geoobjects.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:GeoLinkObjectDuration",
+      "rdfs:subClassOf": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Geo Dauer",
+          "@language": "de"
+        },
+        {
+          "@value": "GeoDuration",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Dauer um von einer Geolocation zu anderen zu gelangen.",
+          "@language": "de"
+        },
+        {
+          "@value": "Duration needed to get from one place to another.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:GeoLinkObjectDistance",
+      "rdfs:subClassOf": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Geo Distanz",
+          "@language": "de"
+        },
+        {
+          "@value": "GeoDistance",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Distanz zw., zwei Geolocations.",
+          "@language": "de"
+        },
+        {
+          "@value": "Distance between two places.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:geoLink",
+      "schema:domainIncludes": {
+        "@id": "schema:Place"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Geo Link",
+          "@language": "de"
+        },
+        {
+          "@value": "geolink",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Verlinkung des Ortes mit anderen Orten.",
+          "@language": "de"
+        },
+        {
+          "@value": "Linking of a place with other places.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:sourceGeo",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:GeoCoordinates"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Quellenkoordinaten",
+          "@language": "de"
+        },
+        {
+          "@value": "source geo coordinates",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Die Koordinaten der Quelle der Linkbeziehung zw. zwei Orten.",
+          "@language": "de"
+        },
+        {
+          "@value": "The coordinates of the source of the linking relation.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:targetGeo",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:GeoCoordinates"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Zielkoordinaten",
+          "@language": "de"
+        },
+        {
+          "@value": "target geo coordinates",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Das Koordinaten des Ziels der Linkbeziehung zw. zwei Orten.",
+          "@language": "de"
+        },
+        {
+          "@value": "The coordinates of the target of the linking relation.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:linkSource",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Place"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Quelle",
+          "@language": "de"
+        },
+        {
+          "@value": "source of link",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Die Quelle der Linkbeziehung zw. zwei Orten.",
+          "@language": "de"
+        },
+        {
+          "@value": "The source of the linking relation.",
+          "@language": "en"
+        }
+      ],
+      "rdfs:subPropertyOf": {
+        "@id": "odta:linkObject"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:linkTarget",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Place"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Ziel",
+          "@language": "de"
+        },
+        {
+          "@value": "target of link",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Das Ziel der Linkbeziehung zw. zwei Orten.",
+          "@language": "de"
+        },
+        {
+          "@value": "The target of the linking relation.",
+          "@language": "en"
+        }
+      ],
+      "rdfs:subPropertyOf": {
+        "@id": "odta:linkObject"
+      },
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:straightLineDistance",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:GeoLinkObjectDistance"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Luftlinienentfernung",
+          "@language": "de"
+        },
+        {
+          "@value": "straight line distance",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Luftlienienentfernung zwischen zwei verlinkten Orten.",
+          "@language": "de"
+        },
+        {
+          "@value": "Straight line distance between two linked places.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:walkingDistance",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:GeoLinkObjectDistance"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Gehweite",
+          "@language": "de"
+        },
+        {
+          "@value": "walking distance",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Gehweite zwischen zwei verlinkten Orten.",
+          "@language": "de"
+        },
+        {
+          "@value": "Walking distance between two linked places.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:walkingDuration",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:GeoLinkObjectDuration"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Gehzeit",
+          "@language": "de"
+        },
+        {
+          "@value": "walking duration",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Gehzeit zwischen zwei verlinkten Orten.",
+          "@language": "de"
+        },
+        {
+          "@value": "Walking duration between two linked places.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:cyclingDistance",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:GeoLinkObjectDistance"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Radfahrweite",
+          "@language": "de"
+        },
+        {
+          "@value": "cycling distance",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Radfahrweite zwischen zwei verlinkten Orten.",
+          "@language": "de"
+        },
+        {
+          "@value": "Cycling distance between two linked places.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:cyclingDuration",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:GeoLinkObjectDuration"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Radfahrzeit",
+          "@language": "de"
+        },
+        {
+          "@value": "cycling duration",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Radfahrzeit zwischen zwei verlinkten Orten.",
+          "@language": "de"
+        },
+        {
+          "@value": "Cycling duration between two linked places.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:drivingDistance",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:GeoLinkObjectDistance"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Fahrweite",
+          "@language": "de"
+        },
+        {
+          "@value": "driving distance",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Fahrzeit zwischen zwei verlinkten Orten.",
+          "@language": "de"
+        },
+        {
+          "@value": "Driving distance between two linked places.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:drivingDuration",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "odta:GeoLinkObjectDuration"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Fahrzeit",
+          "@language": "de"
+        },
+        {
+          "@value": "driving duration",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Fahrzeit zwischen zwei verlinkten Orten.",
+          "@language": "de"
+        },
+        {
+          "@value": "Driving duration between two linked places.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "schema:value",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObjectDuration"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Integer"
+      },
+      "rdfs:label": [
+        {
+          "@value": "Wert",
+          "@language": "de"
+        },
+        {
+          "@value": "value",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Der Wert einer Messung.",
+          "@language": "de"
+        },
+        {
+          "@value": "The value of a measurement.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:linkObject",
+      "schema:domainIncludes": {
+        "@id": "odta:GeoLinkObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Place"
+      },
+      "rdfs:label": [
+        {
+          "@value": "verlinktes Object",
+          "@language": "de"
+        },
+        {
+          "@value": "linked Object",
+          "@language": "en"
+        }
+      ],
+      "rdfs:comment": [
+        {
+          "@value": "Superproperty von linkSource und linkTarget.",
+          "@language": "de"
+        },
+        {
+          "@value": "Super property of linkSource and linkTarget.",
+          "@language": "en"
+        }
+      ],
+      "@type": "rdf:Property"
+    }
+  ]
+}
