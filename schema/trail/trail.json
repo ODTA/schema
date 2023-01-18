@@ -38,6 +38,36 @@
       "@type": "rdfs:Class"
     },
     {
+      "@id": "odta:TrailEnumeration",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      },
+      "rdfs:label": {
+        "@value": "TrailEnumeration",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "An enumeration type whose instances are potential trail types.",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "odta:SACScale",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      },
+      "rdfs:label": {
+        "@value": "SACScale",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A trail difficulty scale between 1 and 6. Grade 1 is the easiest, Grade 6 is the hardest. https://de.wikipedia.org/wiki/SAC-Wanderskala",
+        "@language": "en"
+      },
+      "@type": "rdfs:Class"
+    },
+    {
       "@id": "odta:startLocation",
       "schema:domainIncludes": {
         "@id": "odta:Trail"
@@ -106,19 +136,19 @@
       "@type": "rdf:Property"
     },
     {
-      "@id": "odta:typeOfTrail",
+      "@id": "odta:kindOfTrail",
       "schema:domainIncludes": {
         "@id": "odta:Trail"
       },
       "schema:rangeIncludes": {
-        "@id": "schema:Text"
+        "@id": "odta:TrailEnumeration"
       },
       "rdfs:label": {
-        "@value": "typeOfTrail",
+        "@value": "kindOfTrail",
         "@language": "en"
       },
       "rdfs:comment": {
-        "@value": "The type of a trail.",
+        "@value": "The kind of a trail.",
         "@language": "en"
       },
       "@type": "rdf:Property"
@@ -268,19 +298,19 @@
       "@type": "rdf:Property"
     },
     {
-      "@id": "odta:sacGrade",
+      "@id": "odta:grade",
       "schema:domainIncludes": {
         "@id": "odta:TrailDifficultySpecification"
       },
       "schema:rangeIncludes": {
-        "@id": "schema:Integer"
+        "@id": "odta:SACScale"
       },
       "rdfs:label": {
-        "@value": "sacGrade",
+        "@value": "grade",
         "@language": "en"
       },
       "rdfs:comment": {
-        "@value": "The difficulty grade according to SAC Scale between 1 and 6. Grade 1 is the easiest, Grade 6 is the hardest. https://de.wikipedia.org/wiki/SAC-Wanderskala",
+        "@value": "The difficulty grade according to some scale. Currrently SAC Scale is used.",
         "@language": "en"
       },
       "@type": "rdf:Property"
@@ -302,6 +332,78 @@
         "@language": "en"
       },
       "@type": "rdf:Property"
+    },
+    {
+      "@id": "odta:T1",
+      "@type": "odta:SACScale",
+      "rdfs:label": {
+        "@value": "T1 - Hiking",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "No particular challenge. Easy orientation, can be posible done with sneakers.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:T2",
+      "@type": "odta:",
+      "rdfs:label": {
+        "@value": "T2 - Mountain hiking",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "A little surefootedness required. Good trekking shoes are recommended. Basic orientation skills needed.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:T3",
+      "@type": "odta:SACScale",
+      "rdfs:label": {
+        "@value": "T3 - Challenging mountain hiking",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Good surefootedness required. Trekking shoes are recommended. Average orientation skills and familiarity with alpine environment recommended",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:T4",
+      "@type": "odta:SACScale",
+      "rdfs:label": {
+        "@value": "T4 - Alpine hiking",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Skills for hiking in steep terrain is required. Stable trekking shoes are recommended. Good orientation skills and familiarity with the alpine environment needed. Under bad weather conditions can be particularly challenging.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:T5",
+      "@type": "odta:SACScale",
+      "rdfs:label": {
+        "@value": "T5 - Challenging alpine hiking",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Mountaineering boots are recommended. Good terrain judgement skills and very good orientation skills are needed. High experience in high alpine terrain is required. Experience with ice axe and ropes are recommended.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "odta:T6",
+      "@type": "odta:SACScale",
+      "rdfs:label": {
+        "@value": "T6 - Difficult alpine hiking",
+        "@language": "en"
+      },
+      "rdfs:comment": {
+        "@value": "Excellent orientation skills are required. High experience in alpine environment and certain alpine equipment is recommended",
+        "@language": "en"
+      }
     }
   ]
 }
