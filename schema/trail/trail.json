@@ -347,7 +347,7 @@
     },
     {
       "@id": "odta:T2",
-      "@type": "odta:",
+      "@type": "odta:SACScale",
       "rdfs:label": {
         "@value": "T2 - Mountain hiking",
         "@language": "en"
